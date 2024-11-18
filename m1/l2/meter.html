@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+  <style>
+   /*CSS per webkit, non funzione in Firefox, è preferibile operare usando JS*/
+    meter::-webkit-meter-bar {
+      background: lightgray; /* Colore di sfondo */
+    }
+    meter::-webkit-meter-optimum-value {
+      background: green; /* Colore per valori ottimali */
+    }
+    meter::-webkit-meter-suboptimal-value {
+      background: orange; /* Colore per valori subottimali */
+    }
+    meter::-webkit-meter-even-less-good-value {
+      background: red; /* Colore per valori bassi */
+    }
+  </style>
+</head>
+<body>
+
+<p>Livello della batteria:</p>
+<meter value="29" min="0" max="100" 
+low="30" high="80" optimum="75">
+</meter>
+
+
+
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    
+    <form>
+        
+        <!-- Per dichiarare all'utente lo scopo di un campo, posso utilizzare l'attributo playsolder oppure la il tag label che vedi qui sotto  -->
+        <label for="nome">Nome</label>
+        <input id="nome" type="text" placeholder="Inserisci il tuo nome">
+        
+        <input type="email" placeholder="E-mail">
+        <input type="password" placeholder="Password">
+        
+        <!-- Opzioni prestabilite -->
+        
+        <p>Scegli la taglia</p>
+        <label for="taglia1">M</label>
+        <input checked id="taglia1" type="radio" name="taglia">
+
+        <label for="taglia2">S</label>
+        <input id="taglia2" type="radio" name="taglia">
+
+        <!-- Select si mostra come un menù a tendina da cui è possibile scegliere un'opzione  -->
+        <select>
+            <option value="">-- Seleziona città --</option>
+            <option selected value="1">Milano</option>
+            <option value="2">Roma</option>
+            <option value="3">Napoli</option>
+        </select>
+
+        <textarea rows="2" cols="10"></textarea>
+
+        <button>Invia</button>
+
+    </form>
+
+</body>
+</html>

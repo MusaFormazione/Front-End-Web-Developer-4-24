@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table{
+            width: 100%;
+        }
+        td{
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+
+    <table>
+        <!-- Caption serve a spiegare quali dati sto mostrando nella tabella  -->
+        <caption>Carrello</caption>
+        <thead>
+            <!-- Intestazione della tabella  -->
+            <tr>
+                <th>Gusto</th>
+                <th>Prezzo</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Svolgimento della tabella, i veri e propri dati.  -->
+            <tr>
+                <td>Margherita</td>
+                <td>5€</td>
+            </tr>
+            <tr>
+                <td>Diavola</td>
+                <td>1€</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <!-- Dati aggiuntivi conclusivi  -->
+            <tr>
+                <td><b>Totale:</b></td>
+                <td>6€</td>
+            </tr>
+        </tfoot>
+    </table>
+
+
+    <hr>
+    <h1>Rowspan e colspan</h1>
+    <!-- La prossima tabella non seguirà lo schema semantico, ma è un esempio a scopo didattico per vedere alcuni comportamenti delle tabelle  -->
+
+
+
+    <table>
+        <tr>
+            <td>1</td>
+            <td rowspan="2">2 - 5</td>
+            <td>3</td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>6</td>
+        </tr>
+        <tr>
+            <td colspan="2">7 - 8</td>
+            <td>9</td>
+        </tr>
+    </table>
+
+    
+</body>
+</html>
