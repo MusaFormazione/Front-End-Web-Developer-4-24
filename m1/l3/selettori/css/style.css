@@ -1,0 +1,27 @@
+*{/* peso: 0 */
+ box-sizing: border-box;
+}
+
+div{ /*peso 1*/
+    color: black;
+}
+
+#genitore p{/*peso 100 + 1 = 101*/
+    color: red;
+}
+
+#genitore > p{/*peso 100 + 1 = 101*/
+    text-transform: uppercase;
+}
+
+a.special{/*peso 1 + 10 = 11*/
+    font-style: italic;
+}
+
+div#sfondo-blu{/*peso 1 + 100 = 101*/
+    font-style: italic;
+}
+
+div#sfondo-blu.colore-nero{/*peso 1 + 100 + 10 = 111*/
+    font-style: italic;
+}

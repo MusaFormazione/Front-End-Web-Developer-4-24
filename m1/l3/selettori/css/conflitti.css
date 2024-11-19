@@ -1,0 +1,35 @@
+div#colore-rosso.colore-verde{/*peso 1 + 100 + 10*/
+    color: chocolate;
+}
+
+#colore-rosso{/*peso 100*/
+    color: red;
+}
+/*
+Turistica del ID è di poter essere battuto solo da un'altro ID. 
+*/
+
+
+.colore-verde{/*peso 10*/
+    color: green;
+}
+
+
+div{/*peso 1*/
+    color: aqua;
+    color: blue; 
+    /* vince la regola più in basso */
+}
+
+div{
+    color: brown;
+}
+
+/*
+È possibile aggiungere important dopo il valore su una determinata proprietà per far sì che vinca tutti i conflitti.
+Vi sconsiglio l'utilizzo di important, a meno che non sia necessario per sovrascrivere codice fatto da altri o codice che comunque non possiamo modificare.
+L'utilizzo di important deve essere l'ultima spiaggia.
+*/
+
+
+
