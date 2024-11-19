@@ -4,15 +4,17 @@
 
 #px{
     font-size: 16px;
+    /* Questo elemento, invece, è scollegato dall'elemento root e il suo valore è assoluto, quindi rimarrà per sempre 16 pixel  */
 }
 
 #rem{
-    font-size: 1rem;
+    font-size: 1rem;/*rem = 10px Perché è il valore di fontsize impostato all'elemento root. */
 }
 
 #parent{
     font-size: 20px;
 }
 #em{
-    font-size: 2em;
+    font-size: 1em;
+    /* In questo caso un EM equivale a 20 pixel perché è il valore ereditato dall'elemento parent  */
 }
