@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
   <style>
-   /*CSS per webkit, non funzione in Firefox, è preferibile operare usando JS*/
+   /*CSS per webkit, non funziona in Firefox, è preferibile operare usando JS*/
     meter::-webkit-meter-bar {
       background: lightgray; /* Colore di sfondo */
     }
@@ -23,8 +23,11 @@
 <body>
 
 <p>Livello della batteria:</p>
-<meter value="29" min="0" max="100" 
+<meter 
+value="80" 
+min="0" max="100" 
 low="30" high="80" optimum="75">
+
 </meter>
 
 

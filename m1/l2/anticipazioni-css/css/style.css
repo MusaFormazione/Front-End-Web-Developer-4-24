@@ -1,0 +1,17 @@
+div{
+    width: 100px;
+    height: 100px;
+    background-color: red;
+}
+
+#elemento-giallo{
+    background-color: yellow;
+}
+
+.testo-bianco{
+    color: white;
+}
+.bordo-nero{
+    background-color: aqua;
+    border: 10px solid #000;
+}

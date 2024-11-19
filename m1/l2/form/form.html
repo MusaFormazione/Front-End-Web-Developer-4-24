@@ -12,10 +12,10 @@
         
         <!-- Per dichiarare all'utente lo scopo di un campo, posso utilizzare l'attributo playsolder oppure la il tag label che vedi qui sotto  -->
         <label for="nome">Nome</label>
-        <input id="nome" type="text" placeholder="Inserisci il tuo nome">
+        <input id="nome" name="nome" type="text" placeholder="Inserisci il tuo nome">
         
-        <input type="email" placeholder="E-mail">
-        <input type="password" placeholder="Password">
+        <input type="email" name="email" placeholder="E-mail">
+        <input type="password" name="password" placeholder="Password">
         
         <!-- Opzioni prestabilite -->
         
@@ -27,17 +27,30 @@
         <input id="taglia2" type="radio" name="taglia">
 
         <!-- Select si mostra come un menù a tendina da cui è possibile scegliere un'opzione  -->
-        <select>
+        <select name="city">
             <option value="">-- Seleziona città --</option>
             <option selected value="1">Milano</option>
             <option value="2">Roma</option>
             <option value="3">Napoli</option>
         </select>
 
-        <textarea rows="2" cols="10"></textarea>
-
+        <textarea name="message" rows="2" cols="10"></textarea>
+        
+        <hr>
+        <!-- Questo bottone scatena l'invio del Form.  -->
         <button>Invia</button>
-
+        <!-- Anche input usato in questa maniera scatena l'invio del Form. In questo caso l'attributo value rappresenta l'etichetta del bottone.  -->
+        <input type="submit" value="Salva">
+        
+        <hr>
+        <!-- Bottoni che non scatenano l'invio del form -->
+         <button type="button">Bottone finto</button>
+         <input type="button" value="Bottone finto">
+         
+         <hr>
+         <button type="reset">Resetta il form</button>
+         <input type="reset">
+        
     </form>
 
 </body>
