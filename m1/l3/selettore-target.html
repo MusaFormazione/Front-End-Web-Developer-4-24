@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        .quadrato{
+            width: 100px;
+            height: 100px;
+            background-color: rgba(255, 0, 0, 0.45);
+            border: 1px solid #000;
+        }
+
+        .quadrato:target{
+            background-color: yellow;
+        }
+
+    </style>
+</head>
+<body>
+
+    <ul>
+        <li><a href="#el1">Elemento 1</a></li>
+        <li><a href="#el2">Elemento 2</a></li>
+        <li><a href="#el3">Elemento 3</a></li>
+    </ul>
+
+    <div class="quadrato" id="el1"></div>
+    <div class="quadrato" id="el2"></div>
+    <div class="quadrato" id="el3"></div>
+    
+</body>
+</html>

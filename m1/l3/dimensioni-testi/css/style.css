@@ -1,0 +1,18 @@
+:root{
+    font-size: 10px;
+}
+
+#px{
+    font-size: 16px;
+}
+
+#rem{
+    font-size: 1rem;
+}
+
+#parent{
+    font-size: 20px;
+}
+#em{
+    font-size: 2em;
+}

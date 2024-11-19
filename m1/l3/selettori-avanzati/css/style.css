@@ -1,0 +1,11 @@
+h1, h2, h3{/* peso: 1, 1, 1 */
+    font-family: 'Courier New', Courier, monospace;
+}
+
+p + div{
+    background-color: red;
+}
+
+h4 ~ section{
+    border: 1px solid #000;
+}
