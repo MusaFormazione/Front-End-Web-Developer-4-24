@@ -1,3 +1,4 @@
+/* regole per relative */
 .contenitore-per-relative{
     padding: 20px;
     background-color: #ccc;
@@ -15,4 +16,118 @@
     position: relative;
     top: 15px;
     left: 10px;
+}
+
+/* Regole per Absolute  */
+
+.contenitore-per-absolute{
+    background-color: aqua;
+    height: 50vh;
+    width: 90vw;
+    margin-left: 5vw;
+    margin-top: 30px;
+    position: relative;
+}
+
+.quadrato{
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    position: absolute;
+}
+
+.quadrato:nth-of-type(1){
+    top: -50px;
+    left: -50px;
+}
+
+
+.quadrato:nth-of-type(2){
+    top: 0;
+    right: 0;
+}
+
+.quadrato:nth-of-type(3){
+    right: 0;
+    bottom: 0;
+}
+
+.quadrato:nth-of-type(4){
+    left: 0;
+    bottom: 0;
+}
+
+/* Regole per fixed  */
+
+h1{
+    font-size: 3rem;
+}
+.fixed{
+    background-color: black;
+    height: 50px;
+    width: 50px;
+    bottom: 15px;
+    right: 15px;
+    position: fixed;
+}
+
+/* Regole per sticky  */
+.sticky{
+    background-color: black;
+    height: 50px;
+    width: 100%;
+    position: sticky;
+    top: 0;
+}
+
+/* Esempio z-index  */
+
+.container{
+    width: 80%;
+    margin-left: 10%;
+    border: 1px solid #000;
+    position: relative;
+}
+
+.absolute-block{
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    border: 1px solid #000;
+    font-size: 3rem;
+    text-align: center;
+    color: #fff;
+    text-shadow: 3px 3px 3px #000;
+    /* Imposta un'ombra sui testi, larga tre pixel. Il primo valore rappresenta lo spostamento dell'ombra sull'asse X ed il secondo sull'asse Y  */
+    box-shadow: 3px 3px 3px #000;
+    /* Imposta un'ombra sui tag, larga tre pixel. Il primo valore rappresenta lo spostamento dell'ombra sull'asse X ed il secondo sull'asse Y  */
+}
+
+.absolute-block:nth-of-type(1){
+    background-color: red;
+    z-index: 5;
+}
+.absolute-block:nth-of-type(2){
+    background-color: rgb(255, 149, 0);
+    left: 25px;
+    top: 25px;
+    z-index: 4;
+}
+.absolute-block:nth-of-type(3){
+    background-color: rgb(43, 255, 0);
+    left: 50px;
+    top: 50px;
+    z-index: 3;
+}
+.absolute-block:nth-of-type(4){
+    background-color: rgb(0, 234, 255);
+    left: 75px;
+    top: 75px;
+    z-index: 2;
+}
+.absolute-block:nth-of-type(5){
+    background-color: rgb(85, 0, 255);
+    left: 100px;
+    top: 100px;
+    z-index: 1;
 }
