@@ -1,0 +1,34 @@
+header{
+    height: 70px;
+    background-color: blue;
+}
+
+.container{
+    /* text-align: center; */
+    width: 1170px;
+    margin: 50px auto;
+}
+
+.stile-colonna{
+    width: calc(100% / 4 - 0.2rem);
+    height: 200px;
+    background-color: bisque;
+}
+
+.colonna{
+    display: inline-block;
+}
+
+.colonna-float{
+    border: 1px solid #000;
+    float: right;
+}
+
+.clearfix{
+    clear: both;
+}
+
+footer{
+    height: 250px;
+    background-color:cornflowerblue;
+}
