@@ -1,0 +1,130 @@
+/* Qui trovi le regole relative al Content  */
+.quadrato{
+    height: 100px;
+    width: 100px;
+    background-color: red;
+}
+
+#q2{
+    min-height: 100px;
+    /* Con Min-height. Imposto una dimensione minima per l'elemento che sarà quindi in grado di ingrandirsi qualora il contenuto provocasse la sua estensione  
+    Esiste anche min-width
+    */
+    background-color: rgb(0, 138, 18);
+}
+
+#q3{
+    max-width: 800px;
+    height: 50px;
+    background-color: aqua;
+}
+
+/*
+Overflow
+Gestisce il comportamento del contenuto qualora dovesse essere più ampio rispetto al contenitore 
+*/
+
+#q5{
+    background-color: blueviolet;
+    overflow: hidden;
+    /* Va a nascondere e di fatto tagliare il contenuto che esce dal contenitore  */
+}
+
+#q6{
+    background-color: rgb(226, 220, 43);
+    overflow: scroll;
+    /* Inserisce barre di scorrimento  */
+}
+
+#q7{
+    overflow: auto;
+    /* Inserisce barra di scorrimento solo se necessario  */
+}
+
+
+/*
+
+Qui trovi le regole relative al padding. 
+
+*/
+
+#q8{
+    padding: 5px;
+    /* 
+    Sarebbe come scrivere
+    padding-top:5px
+    padding-right:5px
+    padding-bottom:5px
+    padding-left:5px
+
+    posso utilizzare però delle shorthand diverse
+
+    padding: 10px 5px; asse y 10px. asse x: 5px
+    padding: 10px 5px 0 5px; top right bottom left
+    */
+    box-sizing: border-box;
+    /* Box sizing utilizzato in questa maniera, fa sì che lo spazio per il pudding venga ricavato all'interno dell'elemento senza provocare un ingrandimento dell'elemento stesso  */
+}
+
+/* 
+Qui trovi le regole relative al border 
+*/
+
+#q9{
+    border: 1px solid #000;
+    /* Bordo applicato su tutti i lati.  */
+}
+
+#q10{
+    border-left: 10px solid #000;
+    /* Bordo applicato solo sul lato sinistro  */
+    background-color: transparent;
+}
+
+#q11{
+    border: 10px solid #000;
+    border-right: none; 
+}
+
+#q12{
+    border: 10px solid #000;
+    border-right: none; 
+    border-left: none;
+    background-color: transparent; 
+    border-radius: 50%;
+}
+
+#q13{
+    border: 10px solid #000;
+    border-right: none; 
+    border-left: none;
+    background-color: transparent; 
+    border-top-left-radius: 50%;
+}
+ 
+
+/* 
+
+Qui trovi le regole relative al margin. 
+
+*/
+
+#q14{
+    margin: 50px;
+    /* 
+    Sarebbe come scrivere
+    margin-top:5px
+    margin-right:5px
+    margin-bottom:5px
+    margin-left:5px
+
+    posso utilizzare però delle shorthand diverse
+
+    A margine può essere applicato anche il valore auto, il quale si è adoperato correttamente, permette un centramento automatico dell'elemento. 
+
+    Inoltre margin accetta anche valori negativi. 
+
+    margin: 10px 5px; asse y 10px. asse x: 5px
+    margin: 10px 5px 0 5px; top right bottom left
+    */
+}
