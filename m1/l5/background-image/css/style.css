@@ -1,0 +1,84 @@
+
+img{
+    max-width: 100%;
+    /* Questo blocco di css dice a tutti i tag Img del sito di limitarsi alla larghezza massima del genitore. Questo perché altrimenti le immagini tenderebbero a espandersi al massimo a costo di uscire dai limiti del loro contenitore. */
+}
+
+.contenitore-img{
+    border: 1px solid #000;
+    width: 100px;
+}
+
+
+.bg1{
+    height: 100px;
+    width: 80px;
+    border: 1px solid #000;
+    background-color: #ff0000;/*Ho inserito uno sfondo rosso in modo che si vedano le parti non coperte dallo sfondo immagine */
+    background-image: url(../img/download.png);/*L'immagine inserita come sfondo */
+    background-repeat: no-repeat;/*Questa proprietà annulla la ripetizione delle immagini di sfondo */
+    background-size:contain; 
+    /* Il valore contain in questo caso, indica che noi vogliamo dare la priorità alla visualizzazione dell'immagine di sfondo nella sua interezza, senza tagli a costo di lasciare vuote delle aree o mostrare una ripetizione  */
+
+    background-position: center;
+    /* Background position definisce la posizione dell'immagine che può quindi essere manipolata a discrezione dello sviluppatore.  */
+
+}
+
+.bg2{
+    height: 100px;
+    width: 80px;
+    border: 1px solid #000;
+    background-color: #ff0000;
+    background-image: url(../img/download.png);
+    background-size:cover; 
+    background-position: center;
+    /* Background position definisce la posizione dell'immagine che può quindi essere manipolata a discrezione dello sviluppatore.  */
+}
+
+
+.bg3{
+    height: 200px;
+    width: 200px;
+    border: 1px solid #000;
+    background-image: url(../img/download.png);
+    /* background-size: 10px 100px;  x, y */
+    background-size: 50px;
+    background-position: left;
+    /* Background position definisce la posizione dell'immagine che può quindi essere manipolata a discrezione dello sviluppatore.  */
+}
+
+.bg4{
+    height: 200px;
+    width: 200px;
+    border: 1px solid #000;
+    background-image: url(../img/download.png),
+     url(../img/download.png),
+     url(../img/NunovoLogoMUsa.svg);
+    background-size: 50px;
+    background-position: left top, right bottom, center;
+    background-repeat: no-repeat, no-repeat, repeat-x;
+}
+
+.bg5{
+    height: 500px;
+    background-image: url(https://picsum.photos/300/1200);
+    background-attachment: fixed;
+}
+
+
+/*
+
+CSS gradient
+
+*/
+
+#gradient1{
+    height: 50vh;
+    background-image: linear-gradient(to right, red, black);
+}
+
+#gradient2{
+    height: 50vh;
+    background-image: linear-gradient(30deg, red 0 30%, black 60% 100%);
+}

@@ -1,0 +1,45 @@
+.quadrato{
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    position: absolute;
+}
+
+.scene{
+    perspective: 100px;
+    border: 1px solid #000;
+    position: relative;
+    height: 100vh;
+}
+
+.orizzonte{
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    border-bottom: 1px dotted blue;
+    left: 0;
+}
+.orizzonte.y{
+    transform: rotate(90deg);
+}
+
+#q1{
+    left: 100px;
+    top: 50px;
+    transform: rotate(45deg);
+    text-align: center;
+}
+
+#q2{
+    left: 150px;
+    top: 500px;
+    transform: rotateY(45deg);
+    text-align: center;
+}
+#q3{
+    left: 150px;
+    top: 300px;
+    transform: translateZ(0);
+    text-align: center;
+    background-color: blue;
+}

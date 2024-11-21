@@ -1,0 +1,53 @@
+.quadrato{
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    position: absolute;
+}
+
+.scene{
+    perspective: 100px;
+    border: 1px solid #000;
+    position: relative;
+    height: 100vh;
+}
+
+.orizzonte{
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    border-bottom: 1px dotted blue;
+    left: 0;
+}
+.orizzonte.y{
+    transform: rotate(90deg);
+}
+
+#q1{
+    top: 200px;
+    left: 100px;
+    animation-name: roteaZ;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+#q3{
+    top: 500px;
+    left: 100px;
+    animation-name: allontanaZ;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@keyframes roteaZ {
+    0% { transform: rotateZ(0)}
+    50% { transform: rotateZ(360deg)}
+    100% { transform: rotateZ(0deg)}
+}
+
+@keyframes allontanaZ {
+    0% { transform: translateZ(-300px)}
+    100% { transform: translateZ(300px)}
+}

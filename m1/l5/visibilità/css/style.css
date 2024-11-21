@@ -1,0 +1,56 @@
+#hero, #hero2{
+    text-align: center;
+    padding: 50px 0;
+    height: 250px;
+    position: relative;
+    box-sizing: border-box;
+}
+
+.bg{
+    background-image: url(https://picsum.photos/300/550);
+    background-size: cover;
+    opacity: 0.7;
+    z-index: -1;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    /* 
+    Dato che avevo bisogno di applicare una trasparenza, ho creato l'elemento BG, che è un div che si occuperà solo ed esclusivamente di fare il background. 
+    Questo sarà un elemento Absolute della stessa altezza e larghezza del suo elemento genitore. Il suo posizionamento sarà in alto a sinistra sul punto zero. 
+    Grazie al valore di z-index pari a -1, andrà a posizionarsi dietro gli altri elementi, evitando così che ci siano delle sovrapposizioni che invalidino la possibilità di interagire con i contenuti della sezione Hero. 
+    */
+}
+
+h1{
+    font-size: 2rem;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.cta{
+    background-color: yellow;
+    border: 1px solid #000;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+#hero2 .bg{
+    opacity: 1;
+}
+
+.overlay{
+    background-color: rgba(0,0,0,0.3);
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+/* esempio display none */
+
+ul{
+    display: none;
+}

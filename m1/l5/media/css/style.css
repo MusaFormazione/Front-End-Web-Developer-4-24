@@ -1,0 +1,31 @@
+.blocco{
+    height: 200px;
+    width: 100%;
+    background-color: aqua;
+}
+
+.mobile-hidden{
+    display: none;
+}
+
+@media screen and (min-width:481px){
+
+    .blocco{
+        background-color: rgb(255, 0, 0);
+    }
+
+}
+
+@media screen and (min-width:769px){
+
+    .blocco{
+        background-color: rgb(10, 152, 0);
+    }
+    .mobile-hidden{
+        display: block;
+    }
+    .desktop-hidden{
+        display: none;
+    }
+
+}
