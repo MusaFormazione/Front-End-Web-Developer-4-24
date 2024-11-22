@@ -9,6 +9,13 @@ h2{
     display: flex;
     background-color: aquamarine;
 }
+.flex-area.big{
+    height: 200px;
+}
+
+.flex-area.bigX2{
+    height: 400px;
+}
 
 .colonna{
     height: 100px;
@@ -17,6 +24,9 @@ h2{
     text-align: center;
     font-size: 2rem;
     background-color: rgb(194, 175, 4);
+}
+.colonna.colonna-auto{
+    width: auto;
 }
 
 #f1{
@@ -37,5 +47,123 @@ h2{
 
 #f5{
     flex-wrap: wrap-reverse;
+}
+
+#f6{
+    justify-content: flex-end;
+}
+
+#f7{
+    justify-content: center;
+}
+
+#f8{
+    justify-content: space-between;
+}
+
+#f9{
+    justify-content: space-around;
+}
+
+#f10{
+    justify-content: space-evenly;
+}
+
+#f11{
+    align-items: flex-end;
+}
+
+#f12{
+    align-items: center;
+}
+
+#f13{
+    align-items:stretch;
+}
+
+#f13 .colonna{
+    height: auto;
+}
+
+#f14{
+    flex-wrap: wrap;
+    align-content: space-between;
+}
+
+#f15{
+    flex-wrap: wrap;
+    align-content: center;
+}
+
+#f16{
+    flex-wrap: wrap;
+    align-content: stretch;
+}
+#f16 .colonna{
+    height: auto;
+    gap: 10px;
+    /* gap non funzionerà */
+}
+
+
+#f17{
+    flex-wrap: wrap;
+    align-content: flex-end;
+}
+
+#f18 .colonna:nth-of-type(1){
+    order: 2;
+}
+#f18 .colonna:nth-of-type(2){
+    order: 3;
+}
+#f18 .colonna:nth-of-type(3){
+    order: 1;
+}
+
+#f19{
+    gap: 10px;
+}
+
+#f20 .colonna{
+    /* flex: 1 0 auto */
+    flex-grow: 1; /*La colonna si espande il più possibile*/
+    flex-shrink: 0; /*la colonna non si può ridurre*/
+    flex-basis: auto; /*non ho definito una larghezza indicativa*/
+}
+
+#f21 .colonna{
+    flex-grow: 1; /*La colonna si espande il più possibile*/
+}
+
+#f21 .colonna:nth-of-type(1){
+    flex-grow: 2;
+}
+
+
+#f22 .colonna{
+    flex-grow: 1;
+    /* 
+    Rappresenta la capacità di un elemento di espandersi. 
+    */
+}
+#f22 .colonna:nth-of-type(2){
+    width: 300px;
+}
+
+#f22 .colonna:nth-of-type(3){
+    flex-shrink: 0;
+    /* questo elemento non si contrae */
+}
+
+#f22 .colonna:nth-of-type(1){
+    flex-shrink: 3;
+    /* 
+    flex-shrink rappresenta la capacità di un elemento di restringersi. 
+    */
+}
+
+#f23 .colonna{
+    flex-basis: calc(100% / 3)
 }
 

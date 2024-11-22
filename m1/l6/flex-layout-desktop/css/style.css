@@ -1,0 +1,25 @@
+#header{
+    height: 70px;
+    background-color: aqua;
+}
+
+.flex-container{
+    display: flex;
+}
+
+main{
+    background-color: blue;
+    flex: 1 0 70%;
+    padding: 50px;
+    color: #fff;
+}
+
+aside{
+    background-color: blueviolet;
+    flex: 1 1 30%;
+}
+
+#footer{
+    height: 200px;
+    background-color: aqua;
+}
