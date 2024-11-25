@@ -58,7 +58,7 @@ h2.underline{
 
 .rounded-image{
     border-radius: 100%;
-    width: 300px;
+    max-width: 300px;
 }
 
 .text-center{
@@ -74,6 +74,10 @@ h2.underline{
 
 /* main */
 
+#opening .rounded-image{
+    margin-bottom: 60px;
+}
+
 .work{
     padding: 30px;
     background-color: var(--main-green);
@@ -82,4 +86,63 @@ h2.underline{
 }
 
 
+/*forms*/
+
+input, textarea{
+    height: 80px;
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid #ccc;
+}
+
+textarea{
+    height: 150px;
+}
+
+button {
+    background-color: var(--main-green);
+    padding: 15px;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+}
+
+
 /* footer */
+
+footer{
+    text-align: center;
+}
+
+
+/*responsive*/
+
+@media screen and (min-width: 481px){
+
+    .grid{
+        display: flex;
+        gap: 25px;
+        flex-wrap: wrap;
+    }
+
+    .work{
+        margin-bottom: 0;
+        flex: 1 0 25%;
+    }
+
+
+}
+
+@media screen and (min-width:1200px) {
+    
+    .container-big{
+        max-width: 1280px;
+        margin: 0 auto;
+    }
+    
+    .container-small{
+        max-width: 900px;
+        margin: 0 auto;
+    }
+
+}
