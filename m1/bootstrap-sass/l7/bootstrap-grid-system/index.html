@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+
+    <div class="container">
+        
+        <h2>Colonne elastiche con dimensione non definita</h2>
+        <div class="row">
+            <!-- Si espandono in base allo spazio residuo Prendendo ognuna una parte dello spazio.  -->
+            <div class="col">col</div>
+            <div class="col">col</div>
+            <div class="col">col</div>
+        </div>
+
+        <h2>Colonne con dimensione definita</h2>
+
+        <div class="row">
+            <!-- Impostando una dimensione sulla classe call, devo essere sicuro che il totale faccia 12, in caso contrario ci sarà una interruzione di linea e gli elementi eccedenti alle 12 colonne andranno a capo  -->
+            <div class="col-6">col-6</div>
+            <div class="col-3">col-3</div>
+            <div class="col-3">col-3</div>
+            <!-- Da qui in poi, avendo già raggiunto una somma di 12 colonne, qualsiasi elemento successivo andrà a capo  -->
+            <div class="col-8">col-8 va a capo</div>
+        </div>
+
+        <div class="row">
+            <div class="col-6">col-6</div>
+            <div class="col-3">col-3</div>
+        </div>
+        <div class="row">
+            <div class="col-3">col-3</div>
+        </div>
+
+        <h2>Colonna con offset</h2>
+
+        <!-- Offset rappresenta uno spostamento verso destra della colonna su cui è applicato, Tale spazio non può essere riempito con altre colonne. Il numero legato ad offset rappresenta il numero di slot che l'elemento percorrerà verso destra  -->
+        <div class="row">
+            <div class="col-8 offset-4">col-8 offset-4</div>
+            <div class="col-3 offset-3">col-3 offset-3</div>
+            <div class="col-3 offset-3">col-3 offset-3</div>
+        </div>
+
+        <h2>Colonne responsive con dimensione definita</h2>
+
+        <div class="row">
+            <div class="col-12 col-md-6 col-lg-3"></div>
+            <div class="col-12 col-md-6 col-lg-3"></div>
+            <div class="col-12 col-md-6 col-lg-3"></div>
+            <div class="col-12 col-md-6 col-lg-3"></div>
+            <div class="col-12 col-md-6 col-lg-3"></div>
+            <div class="col-12 col-md-6 col-lg-3"></div>
+            <div class="col-12 col-md-6 col-lg-3 d-none d-lg-block">Solo desktop</div>
+            <div class="col-12 col-md-6 col-lg-3 d-lg-none">Solo mobile</div>
+        </div>
+
+        <h2 class="mt-5">Margini e padding</h2>
+
+        <div class="row py-3 py-md-0 py-lg-5">
+            <div class="col-12"></div>
+        </div>
+
+
+        
+    </div>
+
+
+    
+    <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
