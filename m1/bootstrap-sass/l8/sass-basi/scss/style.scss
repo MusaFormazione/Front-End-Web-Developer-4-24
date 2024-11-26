@@ -3,6 +3,28 @@
 @import "mixin";
 @import "header";
 
+h1{
+    font-size: 1.3rem;
+    @media screen and (min-width: 768px) {
+        font-size: 2rem;
+    }
+}
+
+.container{
+    width: 100%;
+    @include responsive(small){
+        max-width: 480px;
+    }
+    
+    @include responsive-custom(900px){
+        max-width: 900px;
+    }
+
+    @include responsive(large){
+        max-width: 1200px;
+    }
+}
+
 button{
     // Qui sotto assegno al background color il valore presente nella variabile colori legato alla chiave primario. La variabile $colori si trova nel partial variabili. 
     background-color: map-get($colori, primario);
@@ -31,3 +53,6 @@ button{
 .box-cardX2{
     @include quadrato(500px, blue)
 }
+
+@include colori(rosso, #970000);
+@include colori(blu, #120097);

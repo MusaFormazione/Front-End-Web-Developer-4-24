@@ -1,11 +1,54 @@
-@mixin quadratoRosso{
+/*Mixin statico, l'output sarà sempre identico e i valori non possono quindi essere modificati.*/
+@mixin quadratoRosso {
     width: 100px;
     height: 100px;
     background-color: red;
 }
 
-@mixin quadrato($size, $color){
+/*Mixin parametrizzato, ossia dinamico, i valori legati alle proprietà varieranno in base agli argomenti forniti quando il mixin viene richiamato. */
+/*Si chiamano parametri quando definiamo il mixin, ma vengono chiamati argomenti quando il mixin viene richiamato */
+@mixin quadrato($size, $color) {
     width: $size;
     height: $size;
     background-color: $color;
+}
+
+/*Il mixing qui sotto viene utilizzato invece per generare una serie di classi utilizzando i parametri richiesti. */
+@mixin colori($colorName, $color) {
+
+    /*La variabile color name è utilizzata per effettuare l'interpolazione in modo che si possano generare nomi di classi sempre diversi, altrimenti avverrebbero conflitti */
+    .bg-#{$colorName} {
+        background-color: $color;
+    }
+
+    .text-#{$colorName} {
+        color: $color;
+    }
+}
+
+@mixin responsive($breakpoint) {
+
+    @if($breakpoint ==small) {
+        @media screen and (min-width:481px) {
+            @content;
+        }
+    }
+
+    @else if($breakpoint ==medium) {
+        @media screen and (min-width:769px) {
+            @content;
+        }
+    }
+
+    @else if($breakpoint ==large) {
+        @media screen and (min-width:1201px) {
+            @content;
+        }
+    }
+}
+
+@mixin responsive-custom($size) {
+    @media screen and (min-width:$size) {
+        @content;
+    }
 }

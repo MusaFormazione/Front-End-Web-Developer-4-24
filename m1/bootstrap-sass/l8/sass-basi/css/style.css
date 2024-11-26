@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -52,6 +53,10 @@ table {
   border-spacing: 0;
 }
 
+/*Mixin statico, l'output sarà sempre identico e i valori non possono quindi essere modificati.*/
+/*Mixin parametrizzato, ossia dinamico, i valori legati alle proprietà varieranno in base agli argomenti forniti quando il mixin viene richiamato. */
+/*Si chiamano parametri quando definiamo il mixin, ma vengono chiamati argomenti quando il mixin viene richiamato */
+/*Il mixing qui sotto viene utilizzato invece per generare una serie di classi utilizzando i parametri richiesti. */
 header {
   height: 100px;
   background-color: blue;
@@ -61,6 +66,34 @@ header ul {
 }
 header ul a {
   color: #fff;
+}
+
+h1 {
+  font-size: 1.3rem;
+}
+@media screen and (min-width: 768px) {
+  h1 {
+    font-size: 2rem;
+  }
+}
+
+.container {
+  width: 100%;
+}
+@media screen and (min-width: 481px) {
+  .container {
+    max-width: 480px;
+  }
+}
+@media screen and (min-width: 900px) {
+  .container {
+    max-width: 900px;
+  }
+}
+@media screen and (min-width: 1201px) {
+  .container {
+    max-width: 1200px;
+  }
 }
 
 button {
@@ -92,6 +125,24 @@ button:hover {
   width: 500px;
   height: 500px;
   background-color: blue;
+}
+
+/*La variabile color name è utilizzata per effettuare l'interpolazione in modo che si possano generare nomi di classi sempre diversi, altrimenti avverrebbero conflitti */
+.bg-rosso {
+  background-color: #970000;
+}
+
+.text-rosso {
+  color: #970000;
+}
+
+/*La variabile color name è utilizzata per effettuare l'interpolazione in modo che si possano generare nomi di classi sempre diversi, altrimenti avverrebbero conflitti */
+.bg-blu {
+  background-color: #120097;
+}
+
+.text-blu {
+  color: #120097;
 }
 
 /*# sourceMappingURL=style.css.map */
