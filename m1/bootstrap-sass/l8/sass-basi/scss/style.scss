@@ -1,7 +1,33 @@
-h1{
-    color: red;
+@import "reset";
+@import "variabili";
+@import "mixin";
+@import "header";
+
+button{
+    // Qui sotto assegno al background color il valore presente nella variabile colori legato alla chiave primario. La variabile $colori si trova nel partial variabili. 
+    background-color: map-get($colori, primario);
+    border: none;
+    padding: 5px;
+    font-size: 1.3rem;
+    &:hover{
+        background-color:blueviolet;
+        color: #fff;
+    }
 }
 
-span{
-    color: aqua;
+.card{
+    //stile per la card
+    border: 1px solid #ccc;
+    &-body{//& = .card
+        padding: 20px;
+        background-color: aquamarine;
+    }
+}
+
+.box-card{
+    @include quadratoRosso; 
+}
+
+.box-cardX2{
+    @include quadrato(500px, blue)
 }
