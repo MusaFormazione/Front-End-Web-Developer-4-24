@@ -1,0 +1,15 @@
+@mixin gradient_bg($light : true){
+    $start:rgb(255,255,255);
+    $end:rgba(222,222,222,1);
+
+    @if($light == false){
+        $start:darken(rgb(255,255,255), 15%);
+        $end:darken(rgba(222,222,222,1), 15%);
+    }
+
+    background: $start;
+    background: -moz-linear-gradient(180deg, $start 50%, $end 100%);
+    background: -webkit-linear-gradient(180deg, $start 50%, $end 100%);
+    background: linear-gradient(180deg, $start 50%, $end 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffffff",endColorstr="#dedede",GradientType=1);
+}

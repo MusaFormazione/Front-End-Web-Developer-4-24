@@ -1,0 +1,20 @@
+$colors : (
+    main-orange:#dc2a0b,
+    light-grey: #6d6d6d, 
+    medium-grey: #2f2f2f, 
+    dark-grey: #212121, 
+);
+
+@each $colorName, $color in $colors {
+
+    .text-#{$colorName} {
+        color: $color;
+    }
+
+    .bg-#{$colorName} {
+        background-color: $color;
+    }
+
+}
+
+

@@ -1,0 +1,36 @@
+a{
+    text-decoration: none;
+    &:hover{
+        text-decoration: underline;
+    }
+}
+#top-bar, #main-bar{
+    ul{
+        list-style: none;
+    }
+}
+#main-bar{
+    @include gradient_bg();
+
+    #main-menu{
+        margin-bottom: 0;
+
+        li{
+            padding: 0;
+        }
+        a{
+            color: map-get($colors, medium-grey);
+            display: block;
+            height: 100px;
+            line-height: 100px;
+            text-align: center;
+            border-top: 3px solid transparent;
+            text-transform: uppercase;
+            font-weight: bold;
+            &:hover{
+                background-color: #fff;
+                border-top: 3px solid map-get($colors, main-orange);
+            }
+        }
+    }
+}
