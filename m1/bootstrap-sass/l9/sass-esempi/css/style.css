@@ -1,0 +1,97 @@
+@charset "UTF-8";
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.container {
+  margin-top: 100px;
+  padding: 0 30px;
+}
+
+.button, .button-primary, .button-secondary {
+  background-color: aqua;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.button-primary, .button-secondary {
+  /*background che va in conflitto, Verrà applicato questo */
+  background-color: blueviolet;
+  /*Extende importa tutte le proprietà di .button(anche background-color), poi SASS deciderà di tenere il background-color appena definito all'interno del presente blocco */
+  /*Il colore viene aggiunto e definito solo all'interno del blocco attuale.*/
+  color: #fff;
+  box-shadow: 2px 2px 5px #000;
+}
+
+.button-secondary {
+  background-color: blue;
+}
+
+/*
+funzioni built in
+*/
+.special-button {
+  background-color: brown;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  color: #fff;
+}
+.special-button:hover {
+  background-color: rgb(104.0217391304, 26.4782608696, 26.4782608696);
+}
+
+/*# sourceMappingURL=style.css.map */

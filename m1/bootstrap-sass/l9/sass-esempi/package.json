@@ -1,0 +1,11 @@
+{
+  "name": "sass-esempi",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass scss/style.scss css/style.css -w"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}

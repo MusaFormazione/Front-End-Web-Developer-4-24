@@ -1,0 +1,46 @@
+@import "reset";
+
+.container{
+    margin-top: 100px;
+    padding: 0 30px;
+}
+
+.button{
+    background-color: aqua;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.button-primary{
+    /*background che va in conflitto, Verrà applicato questo */
+    background-color: blueviolet;
+    /*Extende importa tutte le proprietà di .button(anche background-color), poi SASS deciderà di tenere il background-color appena definito all'interno del presente blocco */
+    @extend .button;
+    /*Il colore viene aggiunto e definito solo all'interno del blocco attuale.*/
+    color: #fff;
+    box-shadow: 2px 2px 5px #000;
+}
+
+
+.button-secondary{
+    @extend .button-primary;
+    background-color:blue;
+}
+/*
+funzioni built in
+*/
+
+.special-button{
+    background-color: brown;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    color: #fff;
+    &:hover{
+        // background-color: lighten(brown, 15%);
+        background-color: darken(brown, 15%);
+    }
+}
