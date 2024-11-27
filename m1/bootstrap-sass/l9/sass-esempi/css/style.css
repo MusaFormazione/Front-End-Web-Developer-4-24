@@ -53,6 +53,9 @@ table {
   border-spacing: 0;
 }
 
+/*Questa funzione si aspetta in ingresso l'argomento $color che appunto conterrà il colore di cui vogliamo ottenere una versione più chiara o più scura. 
+
+In fase di definizione di una funzione non abbiamo mai i veri valori, la funzione di fatto va vista come un libretto delle istruzioni che spiega cosa succederà Quando questa verrà eseguita */
 .container {
   margin-top: 100px;
   padding: 0 30px;
@@ -92,6 +95,118 @@ funzioni built in
 }
 .special-button:hover {
   background-color: rgb(104.0217391304, 26.4782608696, 26.4782608696);
+}
+
+.contrast-bg {
+  padding: 50px;
+  background-color: rgb(45, 2, 10);
+  color: rgb(142.6595744681, 6.3404255319, 31.7021276596);
+}
+
+.contrast-bg-light {
+  padding: 50px;
+  background-color: rgb(255, 31, 72);
+  color: rgb(184, 0, 33.6785714286);
+}
+
+/*cicli per generare classi multiple*/
+.ms-1 {
+  margin-left: 10px;
+}
+
+.me-1 {
+  margin-right: 10px;
+}
+
+.mt-1 {
+  margin-top: 10px;
+}
+
+.mb-1 {
+  margin-bottom: 10px;
+}
+
+.ms-5 {
+  margin-left: 50px;
+}
+
+.me-5 {
+  margin-right: 50px;
+}
+
+.mt-5 {
+  margin-top: 50px;
+}
+
+.mb-5 {
+  margin-bottom: 50px;
+}
+
+.ms-20 {
+  margin-left: 200px;
+}
+
+.me-20 {
+  margin-right: 200px;
+}
+
+.mt-20 {
+  margin-top: 200px;
+}
+
+.mb-20 {
+  margin-bottom: 200px;
+}
+
+.bg-primary {
+  background-color: red;
+}
+
+.text-primary {
+  color: red;
+}
+
+.btn-primary {
+  background-color: rgb(255, 31, 72);
+  color: rgb(184, 0, 33.6785714286);
+}
+.btn-primary:hover {
+  background-color: rgb(184, 0, 33.6785714286);
+  color: rgb(255, 31, 72);
+}
+
+.bg-secondary {
+  background-color: green;
+}
+
+.text-secondary {
+  color: green;
+}
+
+.btn-secondary {
+  background-color: rgb(255, 31, 72);
+  color: rgb(184, 0, 33.6785714286);
+}
+.btn-secondary:hover {
+  background-color: rgb(184, 0, 33.6785714286);
+  color: rgb(255, 31, 72);
+}
+
+.bg-accent {
+  background-color: yellow;
+}
+
+.text-accent {
+  color: yellow;
+}
+
+.btn-accent {
+  background-color: rgb(255, 31, 72);
+  color: rgb(184, 0, 33.6785714286);
+}
+.btn-accent:hover {
+  background-color: rgb(184, 0, 33.6785714286);
+  color: rgb(255, 31, 72);
 }
 
 /*# sourceMappingURL=style.css.map */

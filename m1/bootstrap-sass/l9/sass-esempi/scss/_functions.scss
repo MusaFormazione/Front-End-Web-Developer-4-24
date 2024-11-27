@@ -1,0 +1,16 @@
+/*Questa funzione si aspetta in ingresso l'argomento $color che appunto conterrà il colore di cui vogliamo ottenere una versione più chiara o più scura. 
+
+In fase di definizione di una funzione non abbiamo mai i veri valori, la funzione di fatto va vista come un libretto delle istruzioni che spiega cosa succederà Quando questa verrà eseguita */
+@function contrast($color){
+    /* Il costrutto if/else prepara due possibili uscite di questa funzione; essendo un blocco condizionale, si aspetta di ricevere un valore booleano oppure una comparazione*/
+    @if(lightness($color) >= 50){
+        /*lightness() È una funzione built-in di SASS che valuta quanto è chiaro un colore e restituisce un numero da zero a 100 che indica il suo livello di luminosità*/
+        @return darken($color, 20%);
+        /*
+        Se la luminosità dei di questo colore è superiore a 50, allora verrà eseguita la riga 8 in cui si specifica che il colore andrà restituito dopo essere stato scurito del 20%. 
+        */
+    }@else{
+        /*Qualora la percentuale di chiarezza del colore non sia superiore o uguale a 50, allora entriamo in questa parte del codice e quindi verrà eseguita la riga successiva a questo commento, la quale andra a schiarire il colore del 20% prima di restituirlo.  */
+        @return lighten($color, 20%);
+    }
+}
