@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+
+        let arr = [
+            'a',
+            'b',
+            'c',
+            ['a', 'b', 'c'],
+            ['a', 1, 2, [3,4]],
+            {
+                array: [1, 2, 3, 4],
+                obj:{
+                    prop1:'Stringa',
+                    prop2:5
+                }
+            },
+            'd',
+            'e'
+        ];
+
+        console.log( arr[2] );//c
+        console.log( arr[3][1] );
+        console.log( arr[4][3][1] );
+        console.log( arr[5].array[0] );
+        console.log( arr[5].obj.prop1 );
+        
+        
+        
+        
+
+    </script>
+    
+</body>
+</html>
