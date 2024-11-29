@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+        function saluto(){
+            console.log('Ciao Mondo!');
+        }
+
+        saluto();
+
+
+        function somma(a, b){
+            console.log(`a:${a}, b:${b}`);
+            console.log(a + b);
+        }
+        
+        somma(2, 5);
+
+        /*
+            gestione di parametri non valorizzati
+        */
+
+        function somma2(a, b){
+            // Se non avessi definito il valore di a 
+            if(a === undefined){
+                //Allora assegna ad a un valore pari a zero. 
+                a = 0
+            }
+
+            if(b === undefined){
+                b = 0
+            }
+            console.log(a + b)
+        }
+
+        somma2(5);
+
+        /*
+            parametri con valori predefiniti
+        */
+
+        function somma3(a = 0,b = 0){
+            console.log(a + b);
+        }
+
+        somma3(1);
+
+        /*
+        restituire un dato
+        */
+       
+        function restituisciSaluto(){
+            // La parola chiave return Definisce quale sarà il dato restituito dalla funzione qualora se ne volesse salvare o leggere il valore
+            return 'Ciao Mondo!';
+            /*
+            Importantissimo!!
+            Return blocca l'esecuzione della funzione. 
+            */
+            console.log('Questo non apparirà in console');
+        }
+
+        let res = restituisciSaluto();
+
+        console.log( res );
+        console.log( restituisciSaluto() );
+        
+
+
+
+
+        
+
+    </script>
+
+</body>
+</html>
