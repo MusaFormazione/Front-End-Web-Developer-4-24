@@ -9,8 +9,81 @@
 
     <script>
 
-        
+        {
 
+            let margherita = {
+                gusto: "Margherita",
+                prezzo: 5,
+                mostraprezzo : function(){
+                    //questo è un metodo
+                }
+            }
+
+            //Gli oggetti non sono convertibili in stringa, quindi non posso mostrarvi direttamente nell'HTML.
+            document.write(margherita) //[object Object]
+            document.write(margherita.gusto) //'margherita'
+
+
+            //leggere
+            console.log(margherita.gusto)
+            console.log(margherita.ingredienti)//non esiste quindi undefined
+
+            //scrittura
+            margherita.gusto = 'Marinara';
+            //Se la proprietà gusto non esistesse, questa riga che ho appena scritto la creerebbe 
+            console.log(margherita);
+
+
+            //esempio di oggetto con bracket notation
+            const obj = {
+                "nome oggetto":'Valore'
+            }
+            //posso accedere solo con bracket notation
+            console.log( obj["nome oggetto"] );
+            
+            /*
+            Utilizzare il più possibile la dott notation e adoperare la bracket notation solo se necessario. 
+            */
+
+
+
+        }
+        console.log('===============');
+        
+        {
+
+            let margherita = {
+                gusto: "Margherita",
+                prezzo: 5,
+                mostraPrezzo : function(){
+                    console.log(`La pizza ${this.gusto} costa 5 euro`);
+                }
+            }
+
+            margherita.mostraPrezzo();
+
+        }
+
+        {
+            //funzione costruttore
+            function Pizza(_gusto, _prezzo){
+                this.gusto = _gusto;
+                this.prezzo = _prezzo
+                this.mostraPrezzo = function(){
+                    console.log(`La pizza ${this.gusto} costa ${this.prezzo} euro`);
+                }
+            }
+
+            const margherita = new Pizza('Margherita',5);
+            const diavola = new Pizza('Diavola',1);
+
+            console.log(margherita, diavola);
+
+            margherita.mostraPrezzo()
+            diavola.mostraPrezzo()
+            
+
+        }
 
     </script>
     
