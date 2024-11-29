@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+        //L'apostrofo o il simbolo delle doppie virgolette potrebbe essere in contrasto con il delimitatore di una stringa, ma anteponendo uno slash retroverso dal al simbolo Che dà problemi Eviteremo questo genere di conflitto 
+        //Questa tecnica si chiama Escape 
+        let stringa = "<div id=\"test\">Contenuto</div>";
+        document.write(stringa);
+        let stringa2 = '<div id="test">Contenuto</div>';
+        let stringa3 = 'L\'HTML';
+        let stringa4 = "L'HTML";
+
+        //concatenamento
+        let nome = 'Mario';
+        let cognome = 'Rossi';
+
+        let nomeCognome = nome + cognome;
+        console.log(nomeCognome);
+        console.log(nome + ' ' + cognome);
+
+        //interpolazione
+        //si utilizza il simbolo backtick
+        //su windows alt + 9 alt + 6 (sul tastierino numerico a destra)
+        //su man option + 9
+        let nomeCognomeInterpolato = `Ciao, sono ${nome} ${cognome}`;
+        console.log(nomeCognomeInterpolato)
+
+        
+        
+
+    </script>
+
+</body>
+</html>

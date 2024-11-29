@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+
+        let pizze = [
+            'Margherita',//0
+            'Diavola',//1
+            'Capricciosa'//2
+        ];
+
+        //Aggiungo n valori all'array pizze. 
+        pizze.push('4 Stagioni','4 formaggi');
+        
+        console.log(pizze);
+        
+        //Elimino l'ultima pizza
+        let elementoEliminato = pizze.pop();
+        console.log(`Hai eliminato la pizza ${elementoEliminato}, annullare?`);
+
+        //splice
+
+        //eliminazione a partire da indice noto
+        let indiceDiPartenza = 2;
+        let quantitàDaEliminare = 1
+        
+        pizze.splice(indiceDiPartenza,quantitàDaEliminare);
+
+        console.log(pizze);
+        
+        //Sostituzione a partire da un indice noto 
+        pizze.splice(2,1,'Marinara')
+        console.log(pizze);
+        
+
+        //sort
+
+        let lettere = ['b','c','z','d','a']
+
+        lettere.sort()
+
+        console.log(lettere);
+        
+        lettere.reverse()
+        console.log(lettere);
+
+        //includes
+
+        console.log( pizze.includes('Diavola') );
+        
+        
+
+        
+    </script>
+
+</body>
+
+</html>

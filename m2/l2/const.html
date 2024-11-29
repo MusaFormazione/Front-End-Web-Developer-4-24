@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+        const nomeCostante = 'Ciao Mondo!';
+        // nomeCostante = 'Hello World!';
+        // Uncaught TypeError: Assignment to constant variable.
+
+        const persona = {
+            nome: 'Mario',
+            cognome: 'Rossi'
+        }
+        //Essendo questo oggetto una costante, non posso andare a fare un riassegnamento al valore principale, ma potrò andare eventualmente a modificare i suoi valori interni 
+
+        //Se vuoi evitare che sia possibile la modifica dei valori interni 
+        //Congela l'oggetto in modo che i valori all'interno diventino immutabili. 
+        Object.freeze(persona);
+        //La modifica del nome non avviene 
+        persona.nome = "Marco";
+
+        console.log(persona);
+
+        
+
+    </script>
+
+</body>
+</html>

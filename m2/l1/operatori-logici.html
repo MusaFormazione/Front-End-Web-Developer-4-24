@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        //Boolean() Converte in booleano il valore passatogli come argomento. 
+        console.log(Boolean('Ciao'));//Se la stringa contiene almeno un carattere, è true.
+        console.log(Boolean(''));//La stringa vuota viene mappata a false.
+        console.log(Boolean(30));//Numero negativo o positivo viene trasformato in booleano true. 
+        console.log(Boolean(-30));
+        console.log(Boolean(0));//Lo zero equivale a false        
+         
+        console.error('==============================');
+        
+
+        let numero1 = 30;
+        let numero2 = 5;
+
+        //uguaglianza
+        console.log(numero1 == numero2);//false
+        console.log(numero1 == '30');//true Avviene la conversione della stringa in numero e viene valutato il valore numerico 
+        console.log(numero1 === '30');//false perchè il tipo di dato è diverso
+        
+        //diversità
+        console.log(numero1 != numero2);//true
+        console.log(numero1 !== '30');//true perchè è diverso il valore o il tipo di dato
+
+        //superiorità, inferiorità
+        console.log(numero1 > 20);//true
+        console.log(numero1 > 30);//false
+        console.log(numero1 >= 30);//true
+        console.log(numero1 < 50);//true
+        console.log(numero1 < 30);//false
+        console.log(numero1 <= 30);//true
+
+        //concatenare le comparazioni
+        console.log(true || false);//Vero, almeno uno dei due valori è true 
+        console.log(true && false);//Falso perché almeno uno dei due valori è false
+        
+        console.log( numero1 >= 0 && numero1 <= 100 );//True, perché numero 1 è allo stesso tempo superiore a zero ed inferiore a 100 
+        
+        
+        
+
+        
+        
+
+        
+
+    </script>
+
+</body>
+</html>

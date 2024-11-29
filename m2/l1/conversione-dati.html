@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+        let a = 2;
+        let b = 4;
+        let res = a + b;//8
+
+        let c = '4';
+        let res2 = a + c;//numero + stringa = conversione in stringa
+        console.log(res2);//'24'
+        
+        let res3 = a * c;//il numero viene convertito in stringa ed avviene una moltiplicazione
+        console.log(res3);
+        
+        let res4 = a * '4a';//Dato che la stringa quattro a non contiene solo numeri, ma contiene almeno una lettera L'operazione non è possibile ed otterremo un valore di tipo NaN, ossia not a number 
+        console.log(res4);
+
+        /*
+        Se vogliamo forzare una conversione di un dato di tipo stringa per ottenere un numero, per fare calcoli matematici, possiamo utilizzare i seguenti sistemi :
+        Number('44') => 44
+        parseInt('44') => 44
+        '44' * 1 => 44
+        */
+        
+
+    </script>
+</body>
+</html>

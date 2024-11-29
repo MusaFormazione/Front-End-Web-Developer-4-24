@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+
+        let a = 0;
+        {
+            console.log('a:',a);//0   
+        }
+
+        {
+            let b = 1;
+            console.log('b:',b);//1            
+        }
+        // console.log('b:',b);   //ReferenceError: b is not defined    
+        
+        let c = 2;
+        {
+            let c = 3
+            console.log('c:',c);//c della riga 25
+        }
+        console.log('c:',c);//c della riga 23
+
+
+
+        {
+            //var non è soggetta al block scope
+            var d = 4;
+        }
+        console.log(4);
+
+        let e;//Inizializzando la variabile e globalmente le sto assegnando lo scope globale 
+        {
+            //Successivamente all'interno di blocchi si potrà procedere alla modifica di questa variabil; Ed il suo valore sarà comunque utilizzabile anche nello scope globale. 
+            e = 5
+        }
+        console.log(e);
+        
+        
+        
+
+    </script>
+    
+</body>
+</html>

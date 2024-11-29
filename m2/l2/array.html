@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+
+        let array = [
+            4,//number
+            'Ciao',//string
+            true,//boolean
+            {},//object
+            []//array
+        ];
+
+        /**
+        let pizza1 = 'Margherita';
+        let pizza2 = 'Diavola';
+        let pizza3 = 'Capricciosa';
+
+        Scomodo!
+        */
+
+        let pizze = [
+            'Margherita',
+            'Diavola',
+            'Capricciosa'
+        ];
+
+        console.log(pizze);
+
+        /****************************************
+         * lettura di un valore
+         */
+
+        console.log('La prima pizza è la' , pizze[0]);
+
+        //Se provo ad a leggere un valore legato ad un indice ancora non valorizzato, riceverò undefined
+        console.log(pizze[3]);
+        
+        //Con un costrutto if posso verificare l'esistenza di un valore prima di accedervi 
+        if(pizze[3] != undefined){
+            console.log(pizze[3]);
+        }
+        
+
+        
+        /****************************************
+         * scrittura di un valore
+         */
+
+         //Il valore all'indice due esiste e viene sovrascritto con il valore marinara. 
+        pizze[2] = 'Marinara';
+        console.log('pizze dopo la modifica dell\'indice 2',pizze);
+        
+        //Il valore all'indice tre non esiste, quindi sto aggiungendo la pizza quattro stagioni 
+        pizze[3] = '4 stagioni';
+        console.log('pizze dopo la modifica dell\'indice 3',pizze);
+        
+        //Aggiungendo un valore direttamente all'indice 8 senza Rispettare la numerazione stiamo creando una serie di spazi vuoti che potrebbero causare problemi durante l'esecuzione del codice.
+        //Bisogna evitare il più possibile questo tipo di situazione
+        pizze[8] = '4 formaggi';
+        console.log('pizze dopo la modifica dell\'indice 8',pizze);
+        
+        /****************************************
+         * eliminazione di un valore
+         */
+        
+        delete pizze[8]; 
+        console.log('pizze dopo l\'eliminazione dell\'indice 8',pizze);
+
+        //Altro approccio da evitare è l'utilizzo di delete per rimuovere una voce, in quanto anche in questo modo possiamo creare dei buchi. In javascript esistono diversi metodi per gli array che vanno a gestire aggiunta o eliminazione in maniera precisa ed efficiente 
+
+
+
+        /*
+        length
+
+        Proprietà degli array e delle stringhe è in grado di mostrarci quanti elementi sono presenti in un array o da quanti caratteri è composta una stringa 
+
+        */
+
+        let lettere = ['a','b','c'];
+
+        console.log('Numero di elementi presenti nell\'array:', lettere.length);
+
+        console.log(lettere[lettere.length - 1]);
+        
+        lettere[lettere.length] = 'd';
+        console.log(lettere[lettere.length - 1]);
+        
+        
+        
+
+
+        
+        
+
+    </script>
+    
+</body>
+</html>
