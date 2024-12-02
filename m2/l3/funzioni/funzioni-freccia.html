@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+        /*comparazione tra funzione classica e funzione freccia*/
+        function saluto(){
+            console.log('ciao');            
+        }
+        
+        saluto()
+
+        const salutoFreccia = () => {
+            console.log('ciao');   
+        }
+
+        salutoFreccia()
+
+        /*modalità delle fn freccia*/
+
+        //Se la funzione ha una sola istruzione, posso evitare le parentesi graffe e in questo caso la parola chiave reterne è sottintesa, quindi scriverla rappresenta un errore di sintassi. 
+        let restituisciSomma = () => 2 + 2;
+
+        console.log( 'Risultato di restituisciSomma:',restituisciSomma() );
+        
+        //Se la funzione richiede un solo argomento, posso evitare l'utilizzo delle parentesi tonde; in questo caso, sarebbe scorretto anche l'assegnamento di un valore predefinito al parametro 
+        let raddoppia = n => n * 2;
+        // let raddoppia = n = 0 => n * 2; //errore
+
+        console.log( raddoppia(8) );
+        
+        // è come scrivere questo
+        // function raddoppia(n){
+        //     return 2 + 2;
+        // }
+
+        //Qui i parametri sono due, quindi sono obbligato a usare le parentesi tonde. 
+        let somma = (a,b) => a + b
+
+
+        // Se la mia funzione è un po' più complessa e quindi ho bisogno di avere più righe di esecuzione, allora sono obbligato ad utilizzare le parentesi graffe; in quel caso, qualora mi occorresse sono  obbligato ad inserire manualmente la parola chiave Return 
+        let sommaERaddoppia = (a,b) => {
+            let risultatoSomma = somma(a,b);
+            let risultato = raddoppia(risultatoSomma)
+            return risultato
+        }
+
+        console.log(sommaERaddoppia(2,3));
+        
+        
+
+        
+
+    </script>
+</body>
+</html>

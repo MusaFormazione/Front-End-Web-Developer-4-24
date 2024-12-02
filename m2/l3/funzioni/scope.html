@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+
+        let esterna = 0;//variabile globale
+
+        test()
+        
+        function test(){
+            console.log(esterna);//la variabile globale viene letta
+            let interna = 1;
+            console.log(interna);
+        }
+
+        // console.log(interna); //non raggiungibile
+
+
+        /*estrarre dati da una funzione*/
+
+        function test2(){
+            let interna = 1;
+            return interna
+        }
+
+        test2();
+
+        console.log(test2());
+        
+        /*
+        L'unico modo per fornire valori, quindi inserirli all'interno di una funzione e utilizzando i parametri. 
+
+        Dato che le variabili all'interno delle funzioni hanno sempre uno scope locale, l'unico modo per far uscire questi valori è attraverso la parola chiave return. 
+        */
+        
+
+    </script>
+    
+</body>
+</html>

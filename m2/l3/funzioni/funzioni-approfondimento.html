@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+        function saluto(){
+            return 'ciao';            
+        }
+
+        console.log( saluto );//In questo modo leggo cosa c'è dentro la funzione saluto ma nulla eseguo, quindi tutto il codice all'interno di questa funzione rimane inutilizzato. 
+        console.log( saluto() );//In questo caso, invece, eseguo la funzione saluto e do al console log solo il suo risultato 
+
+        //self invoking function
+        (function(){
+            console.log('funzione eseguita');            
+        })()
+
+        let test = function(){
+            console.log('funzione test eseguita');            
+        }
+
+        test()
+
+        //closure
+        function funzioneConClosure(){
+
+            let a = 0;
+            
+            function funzioneFiglia(){
+                let a = 0;
+                console.log(`funzione figlia eseguita, il valore della variabile a è: ${a}`);
+                let b = 1;
+            }
+            funzioneFiglia()
+
+            // console.log(b);
+            //Non raggiungibile perché appartiene alla funzione figlia 
+            
+
+        }
+        funzioneConClosure()
+
+
+        function a(x){
+            return function b(y){
+                return function c(z){
+                    return x + y + z;
+                }
+            }
+        }
+
+        console.log( a(2)(5)(8) );
+        
+
+    </script>
+</body>
+</html>

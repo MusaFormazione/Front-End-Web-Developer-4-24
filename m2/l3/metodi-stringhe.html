@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+        /*
+        Similitudini con gli array 
+        */
+
+        let nome = 'Mario';
+
+        console.log( `Il nome è lungo ${nome.length} caratteri` );
+        
+        console.log( `La prima lettera del nome è ${nome[0]}` );
+
+        /*
+        Replace e ReplaceAll. 
+        */
+
+        let frase = 'Ciao e benvenuti alla lezione di Java ##'
+        
+        //Replace elabora la stringa contenuta nella variabile frase e ne restituisce una copia modificata. In questo caso cercherà la parola Java e la sostituirà con Javascript. 
+        console.log( frase.replace('Java','Javascript') );
+        
+        // replace non modifica la stringa originale, Tant'è vero che la variabile frase contiene ancora il valore iniziale. 
+        console.log(frase);
+        
+        //Utilizzo replay per generare una copia modificata dalla stringa in cui non ci sono i cancelletti finali. 
+        console.log( frase.replace('##','') );
+        
+        
+        let frase2 = 'Java Java';
+        //ReplaceAll va a sostituire tutte le corrispondenze ricercate con la frase con la stringa definita 
+        console.log( frase2.replaceAll('Java','Javascript') );
+        
+        let frase3 = 'Java java';
+        console.log( frase3.replaceAll(/Java/gi,'Javascript') );
+
+
+        /*
+        indexOf
+        */
+
+        let frase4 = 'Ciao e benvenuti alla lezione di Java'
+
+        console.log( frase4.indexOf('Java') );
+        console.log( frase4.indexOf('Javascript') );
+
+        if(frase4.indexOf('Javascript') != -1){
+            //Faccio qualcosa se la parola Javascript non è stata trovata 
+        }
+        
+
+        /*
+        split
+        */
+
+        let data = '02/02/1991';
+
+        let array = data.split('/')
+        
+        let giorno = array[0]
+        let mese = array[1]
+        let anno = array[2]
+
+        //Anziché scrivere tre righe per tre variabili estratte da un array, potevo usare questa sintassi 
+        //Questa sintassi si chiama destrutturazione 
+        // let [giorno, mese, anno] = array;
+
+        console.log(giorno, mese, anno);
+        
+
+
+        
+        
+
+
+    </script>
+</body>
+</html>
