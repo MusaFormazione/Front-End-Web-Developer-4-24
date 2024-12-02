@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+        let utenti = [];
+
+        addNewUser('Mario','Rossi',30)
+        addNewUser('Giovanna','Rossi',20)
+
+        console.log(utenti);
+        
+
+
+        function addNewUser(nome, cognome, anni){
+
+            let utente = {
+                nome,
+                cognome,
+                anni
+            }
+
+            utenti.push(utente);
+
+        }
+
+    </script>
+</body>
+</html>

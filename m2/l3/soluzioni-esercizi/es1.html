@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+        let array = [];
+
+        console.log(array);
+        addElementIfNew('Ciao')
+        addElementIfNew('Ciao')
+        console.log(array);
+        addElementIfNew('Mondo')
+        console.log(array);
+        
+        
+        
+        function addElementIfNew(newElement){
+
+            if(!array.includes(newElement)){
+                array.push(newElement);
+            }
+
+            return array;
+        }
+
+
+        //extra : funzione che verifica se l'elemento esiste o meno
+        function checkIsExists(element){
+            if(array.includes(element)){
+                console.log("L'elemento esiste");
+            }else{
+                console.log("L'elemento non esiste");
+            }
+        }
+        
+    </script>
+</body>
+</html>
