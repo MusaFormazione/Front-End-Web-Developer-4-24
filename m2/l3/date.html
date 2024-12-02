@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+
+{
+
+    let now = new Date();
+    
+    console.log(now);
+    
+    let anno = now.getFullYear()
+    console.log({anno});
+    
+    let mese = now.getMonth()//0 - 12
+    console.log({mese});
+    
+    let giorno = now.getDay()
+    console.log({giorno});
+    /*
+    Indice numerico del giorno della settimana attuale, che può andare da zero a sei, dove domenica è il primo giorno della settimana. 
+    */
+   
+   let giornoDelMese = now.getDate()
+   console.log({giornoDelMese});
+   
+   let timestamp = now.getTime()
+   console.log({timestamp});
+   
+   
+   let newDate = new Date(timestamp)
+   console.log(newDate);
+   
+}
+console.error('===================');
+
+{
+
+    let futuro = new Date();
+
+    console.log(futuro);
+    
+    futuro.setMonth( futuro.getMonth() + 1);
+    
+    console.log(futuro);
+
+}
+
+
+
+
+
+
+        
+        
+        
+
+        
+
+
+        
+        
+
+
+
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+
+        let floor = Math.floor(2.5)
+        console.log(floor);
+
+        let ceil = Math.ceil(2.5)
+        console.log(ceil);
+
+        let round = Math.round(2.4)
+        console.log(round);
+
+
+        /*
+            generare numeri randomici
+        */
+        let random = Math.random();
+        console.log(random);
+        
+        //Genero, un numero randomico da zero a 100. 
+        let random2 = Math.floor(random * 100) + 1;
+        console.log(random2);
+
+        
+        /*
+            prelevare randomicamente da un array
+        */
+
+        let array = [
+            'Cane',
+            'Gatto',
+            'Pecora',
+            'Leone'
+        ]
+
+        let rand = Math.floor(random * array.length - 1) + 1;
+
+        console.log( array[rand], rand );
+
+
+        /*funzione che restituisce un numero randomico in un range specifico*/
+        
+
+        function randomNumber(max, min = 1){
+            return Math.floor(Math.random() * (max - min)) + min;
+        }
+
+        console.log( randomNumber(200) );
+        console.log( randomNumber(200, 101) );
+        
+        
+
+
+    </script>
+
+</body>
+
+</html>
