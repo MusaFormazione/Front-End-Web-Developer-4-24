@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+        function calcolaSpedizione(totale){
+            const costo = 7.90;
+            const sconto1 = costo * 0.9;
+            const sconto2 = costo * 0.5;
+            let risultato;
+
+            if(totale < 15){
+
+                risultato = `La spedizione costa ${costo}`;     
+
+            }else if(totale >= 15 && totale < 25){
+
+                risultato = `La spedizione costa ${sconto1}`;   
+
+            }else if(totale >= 25 && totale <= 50){
+
+                risultato = `La spedizione costa ${sconto2}`;   
+
+            }else{
+
+                risultato = `La spedizione costa 0€`;      
+                          
+            }
+
+            console.log(risultato);
+            
+
+        }
+
+        calcolaSpedizione(10)
+        calcolaSpedizione(18)
+        calcolaSpedizione(30)
+        calcolaSpedizione(50.1)
+
+    </script>
+
+</body>
+</html>
