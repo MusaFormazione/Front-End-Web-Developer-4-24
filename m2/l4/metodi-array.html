@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+
+        let pizze = [
+            'Margherita',//0
+            'Diavola',//1
+            'Marinara',//2
+            'Capricciosa',//3
+            '4 Formaggi',//4
+            '4 Stagioni'//5
+        ]
+
+        //Per qualunque tipo di ciclo, quindi operazioni generiche
+        pizze.forEach((pizza, i) => {
+            console.log(pizza, i);
+        })
+
+
+        //map
+        //Genera una copia modificata di un array di partenza. 
+        //La rigenerato sarà sempre di pari lunghezza. 
+        {
+
+            let numeri = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+
+            let numeriRaddoppiati = numeri.map(n => n * 2)
+            console.log(numeri, numeriRaddoppiati);
+        }
+
+
+        //filter
+        //Genera un array contenente una parte delle voci presenti nell'array di partenza. 
+        {
+
+            let numeri = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+
+            let numeriFiltrati = numeri.filter(n => n > 3)
+
+            console.log(numeri, numeriFiltrati);
+
+            //Qualunque cosa che restituisca un booleano si può utilizzare per filtrare l'array 
+            //Nell'esempio qui sotto stiamo cercando solo le pizze, il cui nome inizia per m maiuscolo 
+            // let pizzeM = pizze.filter(pizza => pizza.startsWith('M'))
+            // console.log(pizzeM);
+
+        }
+
+        //find
+        //Come filter, ma restituisce solo la prima corrispondenza trovata. 
+        {
+
+            let numeri = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+
+            let numeroTrovato = numeri.find(n => n > 3)
+
+            console.log('Numero trovato:', numeroTrovato);
+
+        }
+
+        //reduce
+        {
+
+            let numeri = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+
+            let somma = numeri.reduce((accumulatore, elemento) => {
+                return accumulatore + elemento
+            }, 0)
+
+            console.log(somma);//45
+
+
+            //esempio one line
+            // let somma2 = numeri.reduce((acc, el) => acc + el)
+
+        }
+
+        //some
+        {
+
+            let numeri = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+
+            let risultato = numeri.some(n => n > 3)
+            //True se almeno un numero è superiore a tre. 
+
+            console.log('Risultato:', risultato);
+
+        }
+
+        //every
+        {
+
+            let numeri = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+
+            let risultato = numeri.every(n => n > 3)
+            //True se tutti i numeri sono superiori a tre. 
+
+            console.log('Risultato:', risultato);
+
+        }
+
+
+
+
+
+    </script>
+
+</body>
+
+</html>

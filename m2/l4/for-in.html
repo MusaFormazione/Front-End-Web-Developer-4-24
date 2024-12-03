@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+
+        let pizza = {
+            gusto:'Margherita',
+            prezzo: 5,
+            disponibile:true
+        }
+
+        // Ecco la lettura con la dot notation. 
+        console.log(pizza.gusto);            
+        console.log(pizza.prezzo); 
+
+        //Ecco la lettura con la bracket Notation. 
+        console.log(pizza['gusto']);            
+        console.log(pizza['prezzo']);            
+
+        //All'interno di un foro in è necessario adoperare la bracket notation. 
+        for( let proprietà in pizza ){
+
+            //La lett, proprietà conterrà ogni singola proprietà iterativamente dell'oggetto. 
+            console.log(`${proprietà} : ${pizza[proprietà]}`);            
+
+        }
+
+    </script>
+    
+</body>
+</html>

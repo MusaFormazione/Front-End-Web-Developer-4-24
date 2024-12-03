@@ -16,24 +16,33 @@
         }
 
         let pizze = [
-            'Margherita',
-            'Diavola',
-            'Marinara',
-            'Capricciosa',
-            '4 Formaggi',
-            '4 Stagioni'
+            'Margherita',//0
+            'Diavola',//1
+            'Marinara',//2
+            'Capricciosa',//3
+            '4 Formaggi',//4
+            '4 Stagioni'//5
         ]
 
         for(let i = 0; i < pizze.length; i++){
 
+            
+            if(i == 2){
+                //puoi usare la parola chiave continue per saltare alla prossima iterazione
+                continue;
+            }
+            
             console.log(pizze[i]);
+            
+            if(i == 4){
+                //puoi usare la parola chiave break per terminare il ciclo
+                break;
+            }
             
         }
 
         console.log('Esecuzione terminata');
-
-        //esempio di cicli innestati
-        
+       
             
 
     </script>

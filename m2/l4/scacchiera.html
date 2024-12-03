@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .cella{
+            border: 1px solid #000;
+            width: 50px;
+            height: 50px;
+        }
+        .cella.black{
+            background-color: #000;
+            color: #fff;
+        } 
+    </style>
+</head>
+<body>
+
+    <script>
+        //esempio di cicli innestati
+        document.write('<table>')
+            
+            for(let x = 0; x < 10; x++) {
+                
+                document.write('<tr>')
+                    
+                    for(let y = 0; y < 10; y++) {
+                        let pari = (y + x) % 2 === 0;//true se il numero è pari
+                        console.log(pari);
+
+                        let classe = 'cella'
+                        if(!pari){
+                            classe += ' black'
+                        }
+                        
+                        document.write(`<td class="${classe}"> x:${x} y:${y} </td>`)
+                    }
+
+                document.write('</tr>')
+
+            }
+
+
+        document.write('</table>')
+
+    </script>
+    
+</body>
+</html>
