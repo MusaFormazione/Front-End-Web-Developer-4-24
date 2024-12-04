@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+
+        const numeri = [1, 2, 3, 4, 5];
+
+        //Numeri uno Stato sotto forma di array. 
+        console.log(numeri);
+        //I valori presenti in numeri passati direttamente al console.log 
+        console.log(...numeri);
+        //Il risultato sarà come avere scritto i numeri separatamente a mano. 
+        console.log(1, 2, 3, 4, 5);
+
+
+        console.error('============')
+
+        //Utilizzo un rest parameter per unire una serie di valori in un array. 
+        function somma(...numeri) {
+            console.log(numeri);
+            return numeri.reduce((a, el) => a + el);
+        }
+
+        //Qui invece, partendo dal array numeri, ne estraggo i valori In modo che vengano forniti alla funzione somma separatamente 
+        let res = somma(...numeri)
+        console.log(res);
+
+
+        /**
+         * Spread operator su array
+        */
+
+        //copiare un array
+        {
+
+            const array1 = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+            //Creo una copia della REI numero 1 scollegata totalmente dall'array originale, così le modifiche al array2 non si ripercuoteranno anche sull array numero 1.  
+            const array2 = [...array1]
+            //Attenzione a non sbagliare, la sintassi spread operator è necessaria per assegnare i valori di un array ad un'altro, se la omettiamo in realtà stiamo inserendo l'array numero 1 in un nuovo array, complicando tutta la struttura e generando degli output inaspettati. 
+            const array3 = [array1]
+
+            console.log(array2);// [1, 2, 3, 4, 5, 6, 7, 8, 9]
+            console.log(array3);// [ [1, 2, 3, 4, 5, 6, 7, 8, 9] ]
+
+        }
+
+        //concatenare array
+        {
+            const array1 = [1, 2, 3, 4]
+            const array2 = [5, 6, 7, 8, 9]
+
+            const concatenato = [...array1, ...array2];
+            console.log(concatenato);
+
+
+            /**
+            Per concatenare due array esiste anche questo sistema 
+            let concatenato = array2.concat(array1)
+            console.log(concatenato);
+            */
+
+        }
+
+        console.error('============')
+
+        /**
+         * Spread operator su oggetti
+        */
+
+        {
+
+            const pizza = {
+                gusto: 'Margherita',
+                prezzo: 5
+            }
+
+            const pizzaCopy = { ...pizza }
+
+            console.log(pizzaCopy);
+
+        }
+        //modificare un oggetto
+        {
+
+            const pizza = {
+                gusto: 'Margherita',
+                prezzo: 5
+            }
+
+            const diavola = {
+                ...pizza,//Inserisco nell'oggetto diavola tutte le proprietà di pizza
+                gusto:'Diavola'//Dato che questa proprietà viene valorizzata dopo il gusto finale, sarà diavola 
+            }
+
+
+            console.table([pizza, diavola]);
+
+        }
+
+        //unire oggetti
+        {
+            
+            const obj1 = {a:1, b:2}
+            const obj2 = {c:3, d:4}
+            
+            const unione = {...obj1, ...obj2}
+            
+            console.log(unione);//{a: 1, b: 2, c: 3, d: 4}
+            
+            
+        }
+        
+        //Aggiungere proprietà
+        {
+
+            const prodotto = {
+                nome: "Laptop", 
+                prezzo: 1200, 
+                disponibile: true 
+            };
+
+            const prodottoScontato = {
+                ...prodotto, 
+                prezzoScontato:1000
+            }
+
+            console.log(prodottoScontato);
+
+            //Sintassi alternativa con l'utilizzo di una variabile 
+            // const prezzoScontato = 1000;
+            // const prodottoScontato2 = {
+            //     ...prodotto, 
+            //     prezzoScontato
+            // }
+            
+
+        }
+
+
+    </script>
+
+</body>
+
+</html>

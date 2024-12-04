@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <h1>Titolo</h1>
+
+    <div id="esempio">esempio</div>
+
+    <div class="prova"></div>
+    <div class="prova"></div>
+    <div class="prova"></div>
+
+    <script>
+
+        {
+            //Metodi classici per la ricerca di elementi all'interno del DOM
+
+            //Cerca l'elemento che ha l'id esempio 
+            const esempio = document.getElementById("esempio")//un solo elemento
+            console.dir(esempio);
+
+            //Cerca tutti gli elementi che hanno un determinato tag. 
+            const h1List = document.getElementsByTagName("h1")
+            console.log(h1List);
+            console.log(h1List[0]);
+            //Restituisce una HTMLCollection che è una specie di array che però non ha a disposizione i metodi degli array come forEach
+            //Se non trova alcun tag del tipo ricercato restituirà comunque una lista, ma vuota. 
+
+            //Cerca tutti gli elementi che hanno una determinata classe 
+            const prova = document.getElementsByClassName('prova')
+            console.log(prova);
+
+            //Puoi convertire la HTML Collection in un arrei vero e proprio per avere accesso ai vari metodi degli array
+
+            const provaArray = Array.from(prova)
+            console.log(provaArray);
+
+        }
+
+        console.error('==========');
+
+        {
+            //QuerySelector restituisce sempre il primo elemento trovato. 
+            //Nel caso di un ID, quale selector è perfetto perché appunto esisterà un solo elemento con quell'id
+            const esempio = document.querySelector('#esempio')
+
+            const h1 = document.querySelector('h1')
+            console.log(h1);//il primo h1
+
+            const prova = document.querySelector('.prova')
+            console.log(prova);//Il primo elemento con la classe prova. 
+
+        }
+
+        console.error('==========');
+
+        {
+            //querySelectorAll restituisce tutti gli elementi trovati, anche se ci fosse un solo elemento riceverei comunque una lista.  
+            //Essendo fatto per ricevere numerosi elementi, è controindicato l'utilizzo per cercare un elemento con un determinato ID. 
+            const esempio = document.querySelectorAll('#esempio')
+            console.log(esempio);//nodelist
+            
+
+            const h1 = document.querySelectorAll('h1')
+            console.log(h1);//Una node list contenente tutti gli h1 della pagina. 
+
+            const prova = document.querySelectorAll('.prova')
+            console.log(prova);//Una node list contenente tutti gli elementi che hanno la classe prova. 
+
+        }
+
+
+    </script>
+
+</body>
+
+</html>

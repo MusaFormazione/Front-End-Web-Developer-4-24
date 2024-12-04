@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+
+        //Funzione con rest parameter chiamato numeri. 
+        function somma(...numeri){
+            //Tutti i valori forniti verranno inseriti in un array chiamato numeri. 
+            console.log(numeri);
+            
+            //Reduce procede a sommare tutti i numeri tra loro e restituire il risultato. 
+            return numeri.reduce((a,el) => a + el);
+        }
+
+        console.log( somma(2,5,4,7,6,8,9,0) );//41
+
+        
+        //Molte funzioni e metodi già presenti in javascript ad operano l'operatore rest 
+        //Imparando a riconoscere questo operatore, potrai facilmente capire quando un metodo accetta più argomenti
+        const array = []
+
+        //Passando il mouse sul metodo push ti apparirà un popup che ti mostra di fatto l'utilizzo del rest Parameter e questo significa che possiamo inserire una serie di valori che verranno tutti pushati all'interno dell'array definito
+        array.push('a','b','c')
+
+        console.log(array);
+        
+        
+
+    </script>
+    
+</body>
+</html>

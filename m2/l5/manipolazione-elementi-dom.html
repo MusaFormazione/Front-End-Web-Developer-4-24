@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .red-bg{
+            background-color: red;
+            height: 100px;
+        }
+    </style>
+</head>
+<body>
+    
+    <div id="prova"></div>
+
+    <script>
+
+        let prova = document.getElementById("prova");
+
+        if(prova){
+
+            prova.classList.add("red-bg")//Assegno la classe red-bg
+
+            // innerText è la proprietà che contiene il testo dell'elemento esclusi i tag. 
+            // prova.innerText = '<b>Ciao</b>'//i tag vengono Convertiti in testo E quindi sono visibili 
+
+            prova.innerHTML = '<b>Ciao</b>';//Se la stringa contiene tag html correttamente formattati, allora l'html viene renderizzato 
+
+        }
+
+
+    </script>
+</body>
+</html>

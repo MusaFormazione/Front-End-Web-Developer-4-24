@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <div id="target1">
+
+    </div>
+
+    <template>
+
+        <div class="card" >
+            <img src="" class="card-img-top" >
+            <div class="card-body">
+              <h5 class="card-title"></h5>
+              <p class="card-text"></p>
+              <a href="#" class="btn btn-primary"></a>
+            </div>
+          </div>
+
+    </template>
+    
+
+    <script>
+
+
+        //In primis mi aggancio all'elemento in cui voglio scrivere e creare dell'html. 
+        let target1 = document.getElementById("target1");
+
+        //modalità con stringhe
+        target1.innerHTML = "<div id=\"test\" class=\"text-center bg-primary\">Ecco il contenuto</div>";
+
+        //modalità consigliata
+        //Crea un elemento di e lo salvo nella variabile Tiv, ma questo elemento non sarà mostrato finché io non decido di farlo. 
+        let div = document.createElement('div');// <div></div>
+        div.innerText = 'Div creato con createElement';// <div>Div creato con createElement</div>
+        div.classList.add('text-center', 'bg-primary');// <div class="text-center bg-primary">Div creato con createElement</div>
+        console.log(div);
+        
+        //Qualora volessi mettere un'ulteriore tag all'interno del div appena creato dovrò usare createElement e successivamente append, Utilizzando come area target div e come argomento span 
+        let span = document.createElement('span');
+        div.append(span)
+
+        //Se l'argomento fornito ad append non esiste ancora(non è ancora stato inserito nella pagina), append andrà ad inserirlo nell'area specificata, ma se l'elemento esiste già in pagina lo andrà a spostare
+        target1.append(div)
+        // target1.prepend(div) 
+        
+
+        //modalità consigliata per html complesso
+        const cloneTemplate = document.querySelector('template')//Seleziona il tag template 
+        const clone = cloneTemplate.content.cloneNode(true); //Clona il suo contenuto con tutti i figli. 
+
+        clone.querySelector('.card-title').innerText = 'Titolo della card';
+
+        target1.append(clone)
+
+
+
+
+
+
+
+
+
+
+
+
+
+// const prodotti = [
+//     { nome: "Laptop", prezzo: 1200, disponibile: true },
+//     { nome: "Smartphone", prezzo: 800, disponibile: false },
+//     { nome: "Tablet", prezzo: 400, disponibile: true },
+//     { nome: "Auricolari", prezzo: 50, disponibile: true },
+//     { nome: "Monitor", prezzo: 300, disponibile: false },
+//     { nome: "Mouse", prezzo: 25, disponibile: true }
+// ];
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+    </style>
+</head>
+<body>
+
+    <h1 id="titolo">Titolo</h1>
+    
+    <script>
+
+        let titolo = document.getElementById("titolo");
+
+        console.dir(titolo.style)//Accedo all'oggetto stile 
+        console.dir(titolo.style.backgroundColor)//Accedo alla proprietà background color dell'oggetto stile. 
+
+        //Se so accedere a background color in lettura posso anche scrivere un nuovo valore in questa proprietà usandolo gli operatori di assegnamento. 
+        titolo.style.backgroundColor = 'red'//Cambio il colore 
+
+        
+        titolo.innerText = 'ciao'//Cambio il testo contenuto nell'elemento. 
+        titolo.innerText += ' mondo'//Mantenendo il testo precedente, aggiungo la parola mondo 
+
+    </script>
+</body>
+</html>

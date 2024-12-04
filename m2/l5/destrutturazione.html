@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Destrutturazione</h1>
+
+    <script>
+
+        {
+            //Destrutturazione completa di un array 
+            const array = [1, 2, 3];
+            //Crea tre variabili su una sola riga utilizzando i valori dell'array chiamato array 
+            const [a, b, c] = array
+            
+            console.log(a, b, c);
+            
+        }
+        
+        {
+            //Destrutturazione parziale di un array 
+            const array = [1, 2, 3];
+
+            const [,,a] = array
+
+            console.log(a);
+
+        }
+
+
+        {
+            
+            //Destrutturare un oggetto 
+            let pizza = {
+                gusto:'Margherita',
+                prezzo:5
+            }
+
+            const {gusto, prezzo} = pizza;
+
+            console.log(gusto, prezzo);
+            
+
+        }
+
+        {
+            //Destrutturare un oggetto rinominando le variabili. 
+            let pizza = {
+                gusto:'Margherita',
+                prezzo:5
+            }
+
+            const {gusto:sapore, prezzo:costo} = pizza;
+
+            console.log(sapore, costo);
+            
+
+        }
+    </script>
+</body>
+
+</html>
