@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+<body>
+
+    <!-- 
+    Permette di generare nuovi elementi alla pressione di un tasto e rimuoverli successivamente alla pressione di un'ulteriore tasto
+    -->
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <form id="myForm" class="pt-3">
+                    <input class="form-control mb-2" type="text">
+                    <button class="btn btn-primary">Salva</button>
+                </form>
+            </div>
+        </div>
+        <div class="row" id="target">
+            
+        </div>
+    </div>
+
+    <script>
+    
+        const form = document.getElementById("myForm");
+        const input = document.querySelector('#myForm input');
+        const target = document.getElementById('target');
+
+        form.addEventListener('submit',function(e){
+            //Blocco il comportamento naturale del Form, ossia quello di ricaricare la pagina per inviare i dati 
+            e.preventDefault();
+
+            const testo = input.value;//Sempre una stringa
+
+            //If di controllo (Validazione)
+            if(!testo){
+                alert('Devi inserire un testo!');
+                return;//Blocco la funzione
+            }
+
+            //Creo un div contenente il task e assegno ad esso il testo contenuto nell'input e alcune classi per lo stile 
+            const div = document.createElement('div');
+            div.innerText = testo;
+            div.classList.add('col-6','alert','alert-success','item');
+            //Creo il bottone che mi servirà per rimuovere il task e assegno adesso un testo e delle classi per lo stile 
+            const removeButton = document.createElement('button');
+            removeButton.innerText = 'Elimina';
+            removeButton.classList.add('btn','btn-danger');
+            
+            //Assegna una funzionalità al bottone per la rimozione che servirà a distruggere il task alla pressione del bottone stesso. 
+            removeButton.addEventListener('click',function(){
+                //Il metodo remove distrugge l'elemento del DOM a cui è assegnato 
+                div.remove();
+            })
+
+            //Inserisco il bottone per l'eliminazione all'interno del Div ( Contenitore task ). 
+            div.append(removeButton);
+            //Inserisco il Div e tutto il suo contenuto all'interno dell'area target che si trova già nella pagina HTML. 
+            target.append(div);
+
+            input.value = '';//Svuoto il campo input
+        })
+
+        
+
+        
+
+    </script>
+</body>
+</html>
