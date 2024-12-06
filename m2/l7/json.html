@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+        const pizze = [
+            {
+                "gusto":"margherita",
+                "prezzo": 5
+            },
+            {
+                "gusto":"Diavola",
+                "prezzo": 1
+            }
+        ]
+        //Salvo l'oggetto in local storage, dopo averlo convertito in una stringa formato json 
+        localStorage.setItem('pizze', JSON.stringify(pizze))
+
+
+        const dati = localStorage.getItem('pizze')
+        console.log(typeof dati);//string
+        console.log(dati[0]);//[
+
+        //Per poter lavorare con il dato sotto forma di oggetto è necessario fare un parse
+        
+        const pizzeInLocalStorage = JSON.parse(dati)
+        console.log(pizzeInLocalStorage);
+        
+        
+        
+
+    </script>
+</body>
+</html>

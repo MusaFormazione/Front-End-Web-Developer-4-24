@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    
+    <script>
+
+        /*
+            Va utilizzato solo ed esclusivamente per salvare dati che vanno poi successivamente recuperati in altre pagine.
+            Non si utilizza per salvare valori in sostituzione alle variabili 
+
+            Non va utilizzato per risolvere problemi che potresti incontrare nel recuperare dati durante le elaborazioni asincrone.
+        */
+
+        //Creazione di chiave e valore 
+        //Salvo il valore Michele legato alla chiave nome. 
+        //Se la chiave non esiste, la crea, ma se esiste ne aggiorna il valore. 
+        localStorage.setItem("nome","Michele");
+
+        //Recupero del valore 
+        //Conoscendo la chiave, recupero il valore legato alla chiave nome. 
+        const nome = localStorage.getItem("nome");
+        //Attenzione, se la chiave non è ancora stata creata, getItem restituisce null 
+        console.log(nome);
+
+        //Eliminazione di chiave e valore 
+        // localStorage.removeItem('nome');
+
+        //Eliminazione di tutte le chiavi e tutti i valori in localStorage
+        // localStorage.clear();
+        
+
+    </script>
+
+</body>
+</html>
