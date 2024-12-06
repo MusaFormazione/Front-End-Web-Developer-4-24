@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+
+        function setCookie(key, value){
+            const date = new Date()
+            date.setMonth(date.getMonth() + 1)
+            
+            document.cookie = `${key}=${value}; expires=${date.toUTCString()};`
+        }
+        
+        setCookie('nome','Michele');
+        setCookie('cognome','Michele');
+        setCookie('anni','33');
+        
+        
+        function getCookie(key){
+            const cookies = document.cookie.split('; ')
+
+            const foundCookie = cookies.find(c => c.startsWith(key))
+
+            const value = foundCookie.split('=')[1]
+
+            return value
+            
+        }
+
+        console.log(getCookie('nome'))
+        console.log(getCookie('anni'))
+
+    </script>
+    
+</body>
+</html>
