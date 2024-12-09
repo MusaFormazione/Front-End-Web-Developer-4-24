@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <style>
+
+        .card:target{
+            box-shadow: 3px 3px 5px #000;
+        }
+
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-sm bg-body-tertiary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Navbar</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#card1">Card1</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#card2">card2</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#card3">card3</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-3">
+
+                <div id="card1" class="card">
+                    <img src="https://picsum.photos/200/100?random=1" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the card's content.</p>
+                        <a href="#" class="btn btn-primary">Click</a>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="col-3">
+
+                <div id="card2" class="card">
+                    <img src="https://picsum.photos/200/100?random=2" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the card's content.</p>
+                        <a href="#" class="btn btn-primary">Click</a>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="col-3">
+
+                <div id="card3" class="card">
+                    <img src="https://picsum.photos/200/100?random=3" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the card's content.</p>
+                        <a href="#" class="btn btn-primary">Click</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="mt-3 mb-5">
+        <button id="indietro" class="btn btn-success">Indietro</button>
+        <button id="avanti" class="btn btn-danger">Avanti</button>
+        <button onclick="history.go(3)" class="btn btn-info">Naviga avanti + 3</button>
+        <button onclick="history.go(-3)" class="btn btn-info">Naviga indietro - 3</button>
+    </div>
+
+    <button id="redirect" class="btn btn-secondary">Vai al sito di Musa Formazione</button>
+
+    <script>
+
+        const indietro = document.querySelector('#indietro');
+        const avanti = document.querySelector('#avanti');
+        const redirect = document.querySelector('#redirect');
+
+        redirect.addEventListener('click', ()=>{
+            
+            //Vado a forzare l'inserimento nella History del dell'Url 
+            history.pushState({}, '', location.href)
+            //Location potrebbe non lasciare tracce nella history e quindi l'utente non può facilmente tornare indietro. 
+            location.href = 'https://www.musaformazione.it/'
+
+            
+        })
+
+        indietro.addEventListener('click', () => {
+
+            history.back()
+
+        })
+
+        avanti.addEventListener('click', () => {
+
+            history.forward()
+
+        })
+
+
+
+    </script>
+
+</body>
+
+</html>

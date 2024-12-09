@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+        class Pizza{
+
+            constructor(_gusto, _prezzo){
+                this.gusto = _gusto;
+                this.prezzo = _prezzo;
+                // Oltre a inizializzare e valorizzare le proprietà, posso anche richiamare metodi o avviare funzionamenti in fase di creazione dell'istanza 
+                console.log('Classe istanziata, prezzo:',this.mostraPrezzo());
+            }
+
+            mostraPrezzo(){
+                return this.prezzo + '€'
+            }
+
+            applicaSconto(){
+                this.prezzo = this.prezzo * 0.9 
+            }
+        }
+
+        const margherita = new Pizza('Margherita',5);
+        const diavola = new Pizza('Diavola',1);
+
+        console.log('prezzo margherita',margherita.mostraPrezzo());
+        console.log('prezzo Diavola', diavola.mostraPrezzo());
+        
+        diavola.applicaSconto()
+        
+        console.log('prezzo Diavola', diavola.mostraPrezzo());
+        
+
+    </script>
+</body>
+</html>
