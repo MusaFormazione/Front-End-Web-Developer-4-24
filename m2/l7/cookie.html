@@ -26,6 +26,8 @@
 
             const foundCookie = cookies.find(c => c.startsWith(key))
 
+            if(!foundCookie) return null//Blocco la funzione e restituisco al se il cookie non c'è. 
+
             const value = foundCookie.split('=')[1]
 
             return value
