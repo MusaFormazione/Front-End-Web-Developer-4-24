@@ -16,3 +16,25 @@ export function getCookie(key){
 
     return foundCookie ? foundCookie.split('=')[1] : null
 }
+
+export class CookieManager{
+
+    static setCookie(key, value){
+        const date = new Date();
+        date.setMonth(date.getMonth() + 1);
+        
+        let cookie = `${key}=${value}`;
+        let expires = `expires=${date.toUTCString()}`;
+        
+        document.cookie = `${cookie}; ${expires}; path=/`;
+    }
+
+    static getCookie(key){
+        const cookies = document.cookie.split('; ')
+
+        const foundCookie = cookies.find(c =>  c.startsWith(key))    
+
+        return foundCookie ? foundCookie.split('=')[1] : null
+    }
+
+}

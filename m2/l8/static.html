@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+
+    class CookieManager{
+
+        static setCookie(key, value){
+            const date = new Date();
+            date.setMonth(date.getMonth() + 1);
+            
+            let cookie = `${key}=${value}`;
+            let expires = `expires=${date.toUTCString()}`;
+            
+            document.cookie = `${cookie}; ${expires}; path=/`;
+        }
+
+        static getCookie(key){
+            const cookies = document.cookie.split('; ')
+
+            const foundCookie = cookies.find(c =>  c.startsWith(key))    
+
+            return foundCookie ? foundCookie.split('=')[1] : null
+        }
+
+    }
+
+    //metodo statico
+    CookieManager.getCookie()
+
+    //I metodi statici possono accedere solo ad altri metodi statici all'interno della classe in cui si trovano 
+    //I metodi statici possono accedere solo alle proprietà statiche all'interno della classe in cui si trovano. 
+
+    //Un esempio di proprietà statica è la proprietà PI dell'oggetto Math di Javascript. 
+    console.log(Math.PI)
+
+    </script>
+</body>
+</html>

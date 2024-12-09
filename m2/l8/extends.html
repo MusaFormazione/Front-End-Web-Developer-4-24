@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+        class Veicolo {
+
+            constructor(velMax, nRuote = 2){
+                this.velMax = velMax;
+                this.nRuote = nRuote;
+                this.vel = 0
+            }
+
+            mostraDettagli(){
+                return `velocità massima: ${this.velMax}km/h, n° ruote: ${this.nRuote}`;
+            }
+
+            accelera(){
+                if((this.vel + 1) < this.velMax){
+                    this.vel++
+                }
+            }
+            
+            frena(){
+                if(this.vel > 0){
+                    this.vel--
+                }
+            }
+
+            ferma(){
+                this.vel = 0;
+            }
+
+        }
+
+
+        class Bicicletta extends Veicolo{
+
+            constructor(marca, tipo){
+                super(40,2)
+                this.marca = marca
+                this.tipo = tipo
+            }
+
+            rotelle(bool){
+                if(bool){
+                    this.nRuote = 4
+                }else{
+                    this.nRuote = 2
+                }
+                //Si può fare anche col ternario 1
+                // this.nRuote = bool ? 4 : 2
+            }
+
+        }
+
+        let bici = new Bicicletta('ABUS', 'city bike');
+        bici.accelera()//vel +1
+        bici.accelera()//vel +1
+        bici.frena()//vel -1
+        bici.ferma()//vel = 0
+
+        bici.rotelle(true)
+        console.log(bici);//con 4 ruote
+        bici.rotelle(false)
+        console.log(bici);//con 2 ruote
+
+
+        class Automobile extends Veicolo{
+            constructor(velMax, marca, modello, nPorte){
+                super(velMax, 4)
+                this.marca = marca;
+                this.modello = modello
+                this.nPorte = nPorte
+            }
+
+            accelera(acc){
+                if((this.vel + acc) < this.velMax){
+                    this.vel += acc
+                }
+            }
+
+            // Ridefinendo un metodo con lo stesso nome utilizzato all'interno della classe genitore stiamo di fatto rompendo la connessione con quel metodo, sarà quindi necessario ridefinire il funzionamento del metodo all'interno della classe attuale 
+            mostraDettagli(){
+                //Utilizzando "super" posso comunque accedere al metodo della classe genitore e adoperarne il risultato per arricchire il metodo locale 
+                return `${super.mostraDettagli()}, Marca: ${this.marca}, Modello: ${this.modello}`
+            }
+        }
+
+        const fiat500 = new Automobile(170, 'Fiat', '500', 3);
+        console.log(fiat500);
+
+        fiat500.accelera(100);
+
+        console.log(fiat500.mostraDettagli());
+
+
+    </script>
+
+</body>
+</html>
