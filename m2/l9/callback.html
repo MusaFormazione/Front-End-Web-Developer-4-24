@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div id="test"></div>
+    <div id="test2"></div>
+
+    <script>
+        //Il parametro callback si aspetterà di contenere una funzione. Qualora non fosse una funzione, riceveremo un errore. 
+        function scrivi(selettore, testo, callback){
+            const target = document.querySelector(selettore);
+            //Il parametro callback quindi sarà una qualsiasi funzione che sia in grado di ottenere un dato testuale e restituirlo. Perché questo abbia senso, il valore testuale va modificato e restituito in seguito alla modifica. 
+            target.innerHTML = callback(testo);
+        }
+
+        //A questo punto posso definire una callback anonima e passarla direttamente come argomento alla funzione scrivi. Questa funzione prenderà il posto della funzione chiamata col back. 
+        scrivi('#test','Ciao Mondo!', (t)=> `<b>${t}</b>`)
+
+        //Posso anche utilizzare una funzione che abbia già un nome, mi basta richiamarne il nome tra gli argomenti nella posizione del parametro callback. 
+        scrivi('#test2','Ciao Mondo!', corsivo)
+        //Fondamentale quando passi la funzione nominale come callback non devi usare le parentesi tonde 
+
+        //Quelle che vedi qui sotto sono due funzioni create per l'utilizzo come callback all'interno della funzione scrivi e di fatto rispettano il funzionamento, ottengono un parametro protestuale e lo restituiscono dopo averlo modificato. 
+        function grassetto(testo){
+            return `<b>${testo}</b>`
+        }
+
+        function corsivo(testo){
+            return `<i>${testo}</i>`
+        }
+
+
+        /*
+        Esempio di callback Hell. 
+        */
+
+
+        function richiediDatiUtente(){
+            //Funziona che restituisce i dati dell'utente, ad eccezione dell'indirizzo e delle fatture 
+        }
+
+        function richiediIndirizzoUtente(){
+            //Funzione che grazie all'ID precedentemente ottenuto dell'utente può. Può andare a recuperare l'indirizzo 
+        }
+
+        function richiediFattureUtente(){
+            //Poniamo il caso in cui per ottenere le fatture dobbiamo fornire l'id dell'indirizzo dell'utente e l'id dell'utente stesso
+        }
+
+
+        //Il call back hell è una situazione in cui diverse colbec si concatenano e si richiamano tra di loro, andando a creare questa forma conica nel codice che rende tutto poco leggibile, poco gestibile e poco aggiornabile. 
+        richiediDatiUtente()
+        .then(datiUtente => {
+
+            richiediIndirizzoUtente()
+            .then(indirizzo => {
+
+                richiediFattureUtente()
+                .then(fatture => {
+                    //Fai qualcosa con le fatture
+                })
+
+            })
+        })
+
+    </script>
+</body>
+</html>

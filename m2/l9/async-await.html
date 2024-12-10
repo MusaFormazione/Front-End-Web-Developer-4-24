@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+        //Confrontando questa funzione con la Promise vista precedentemente, potrai notare che in questo caso possiamo effettuare le stesse operazioni, ma con una sintassi estremamente più pulita. La funzione asincrona P di fatto restituirà una promise esattamente allo stesso modo, visto nel file promise.html.
+        //Sebbene le promise abbiano un caso di successo e in caso di rifiuto ben definito, questa cosa non avviene all'interno delle funzioni asincrone, sarà quindi necessario lanciare manualmente un errore per generare un'eccezione  
+        async function p(){
+
+            const password = 'password'
+                
+            if(password === "passwor"){
+                //Qualsiasi retail all'interno della funzione asincrona sarà considerato caso di successo 
+                return 'Accesso consentito'
+            }else{
+                //Per generare un caso di insuccesso serve invece lanciare un'eccezione 
+                //Tale eccezione potrà essere gestita con il metodo catch delle promise oppure con il blocco try...catch 
+                throw new Error('Invalid password')
+            }
+
+        }
+
+        //Dato che la funzione P è asincrona restituisce una promise e, se restituisce una promise, posso utilizzare i metodi then e catch 
+        p()
+        .then( res => console.log(res) )//Riceve il valore restituito dalla funzione asincrona
+        .catch( error => console.error(error))//Se invece viene scatenata un'eccezione, allora il suo contenuto verrà passato al catch che la deve gestire 
+
+        //Un'alternativa ben più pulita sarebbe l'utilizzo di una funzione asincrona per poterne gestire un'altra
+        async function init(){
+
+            //Tra i prova ad eseguire il codice, ma qualora si verificasse un errore, l'esecuzione passa al blocco catch che gestirà l'eccezione. 
+            try{
+
+                //Await risolve la promise is esattamente come prima faceva il then. 
+                const risultato = await p();
+                console.log(risultato);
+            
+            }catch(error){
+                console.error(error);
+            }
+            
+        }
+
+        init()
+
+    </script>
+    
+</body>
+</html>

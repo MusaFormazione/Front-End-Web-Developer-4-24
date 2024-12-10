@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        class Persona{
+            constructor(nome, cognome, anni){
+                this.nome = nome
+                this.cognome = cognome
+                this.anni = anni
+            }
+
+            confrontaAnni(persona){
+                
+                if(this.anni > persona.anni){
+                    return `${this.nome} ${this.cognome} è più vecchio di ${persona.nome} ${persona.cognome}`;
+                }else if(this.anni < persona.anni){
+                    return `${this.nome} ${this.cognome} è più giovane di ${persona.nome} ${persona.cognome}`;
+                }else{
+                    return `${this.nome} ${this.cognome} e ${persona.nome} ${persona.cognome} hanno la stessa età`;
+                }
+                
+            }
+        }
+
+        let danilo = new Persona('Danilo','Rossano',21);
+        let michele = new Persona('Michele','Tedesco',33)
+
+        let confronto1 = danilo.confrontaAnni(michele)
+        let confronto2 = michele.confrontaAnni(danilo)
+
+        console.log(confronto1);
+        console.log(confronto2);
+        
+
+    </script>
+</body>
+</html>

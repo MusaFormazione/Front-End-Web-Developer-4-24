@@ -1,0 +1,53 @@
+[
+    {
+      "gusto": "Margherita",
+      "prezzo": 7,
+      "disponibile": true
+    },
+    {
+      "gusto": "Diavola",
+      "prezzo": 1,
+      "disponibile": true
+    },
+    {
+      "gusto": "Quattro Formaggi",
+      "prezzo": 9,
+      "disponibile": true
+    },
+    {
+      "gusto": "Capricciosa",
+      "prezzo": 10,
+      "disponibile": true
+    },
+    {
+      "gusto": "Marinara",
+      "prezzo": 6,
+      "disponibile": true
+    },
+    {
+      "gusto": "Boscaiola",
+      "prezzo": 11,
+      "disponibile": false
+    },
+    {
+      "gusto": "Napoli",
+      "prezzo": 8,
+      "disponibile": true
+    },
+    {
+      "gusto": "Ananas",
+      "prezzo": 900,
+      "disponibile": false
+    },
+    {
+      "gusto": "Prosciutto e Funghi",
+      "prezzo": 10,
+      "disponibile": true
+    },
+    {
+      "gusto": "Salsiccia e Friarielli",
+      "prezzo": 12,
+      "disponibile": false
+    }
+  ]
+  

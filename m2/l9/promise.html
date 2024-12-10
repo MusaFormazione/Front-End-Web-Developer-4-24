@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+
+
+        const p = new Promise(function(resolve, reject){
+
+            //Il setTimeout serve solo per simulare l'attesa del server. 
+            setTimeout(function(){
+
+                const password = 'password'
+                
+                if(password === "password"){
+                    resolve('Accesso consentito')
+                }else{
+                    reject({message: 'Invalid password'})
+                }
+            },200)
+            
+        })
+
+        console.log(p);//promise, non il dato al suo interno
+
+        let a = 0;
+
+        p.then(res => {
+            console.log(res);
+            //Se viene eseguito questo codice vuol dire che la promise ha terminato la sua esecuzione. Questo codice verrà letto con alta probabilità in un momento futuro rispetto alle altre righe.
+            a++;
+            //Da questo momento "a" varrà 1 e quindi il console.log all'interno del then andrà a mostrare il dato ottenuto dopo la risposta della promise 
+            console.log(a);//1
+        })
+
+        //Questa variabile viene utilizzata prima dell'incremento che avviene all'interno del metodo then()
+        console.log(a);//0
+
+
+        //Questa sintassi mostra come possono essere passate due callback al metodo Dan e in questo caso la seconda call back è quella che gestisce il caso di errore 
+        //Questo tipo di sintassi non è particolarmente utilizzata 
+        p.then(
+            res=> console.log(res) ,//successo gestito
+            err=> console.error(err) //errore gestito
+        )
+        
+        //Questa sintassi, invece, è molto più comune e comprende l'utilizzo del Dan solo per la gestione del caso di successo, mentre il caso di insuccesso viene gestito da catch. 
+        p
+        .then(res=> console.log(res))
+        .catch(err=> console.error(err))
+
+
+        p.then(res=> 'ciao')
+        .then(res=> console.log(res))//ciao
+
+    </script>
+    
+</body>
+</html>
