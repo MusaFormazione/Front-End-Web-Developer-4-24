@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+
+        const id = 4;
+        const baseUrl = 'https://jsonplaceholder.typicode.com'
+
+        //Abbiamo l'ID dell'utente, dobbiamo recuperare i dati dell'utente e tutti i post che ha creato. 
+
+        async function init(){
+
+            //Quando è necessario utilizzare numerosi numerose chiamate per comporre i dati che poi mi permettono di costruire la pagina Utilizzando tanti away o tanti den è possibile andare a creare un collo di bottiglia, cosa che va evitata. 
+            // const userResponse = await fetch(`${baseUrl}/users/${id}`)//10s
+            // const user = await userResponse.json()//1s
+
+            // const postsResponse = await fetch(`${baseUrl}/posts?userId=${id}`)//10s
+            // const posts = await postsResponse.json()//1s
+            //totale 22secondi
+
+
+            //Promise all invece mi permette di eseguire parallelamente diverse chiamate e quindi risolvere in contemporanea diverse promise, evitando il collo di bottiglia. La durata dell'attesa sarà sarà uguale alla durata della chiamata che ha richiesto più tempo 
+            const [user, posts] = await Promise.all([
+                fetch(`${baseUrl}/users/${id}`).then(res => res.json()),//10s
+                fetch(`${baseUrl}/posts?userId=${id}`).then(res => res.json())//5s
+            ])//totale 10s
+            
+            const namedPosts = posts.map(p => {
+                return {...p, author: user.username}
+            })
+
+            console.log(namedPosts);
+            
+
+        } 
+
+        init()
+
+        //L'alternativa, usando then() mi importerebbe dritto alla callback Hell. 
+        // fetch(`${baseUrl}/users/${id}`)//10 secondi
+        // .then(res => res.json())
+        // .then(user => {
+        //     //fa qualcosa
+        //     fetch(`${baseUrl}/posts?userId=${id}`)//10 secondi
+        //     .then(res => res.json())
+        //     .then(user => {
+        //         //fa qualcosa
+        //     })
+        // })
+
+
+
+    </script>
+    
+</body>
+</html>
