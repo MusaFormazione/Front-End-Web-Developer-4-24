@@ -1,5 +1,5 @@
 import { iPizza } from './Models/iPizza';
-import { environment } from './environment.js';
+import { environment } from './environment';
 
 const form =  document.getElementById('edit-form');
 const gusto =  <HTMLInputElement> document.getElementById('gusto');
