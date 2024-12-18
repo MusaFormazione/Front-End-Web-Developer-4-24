@@ -1,9 +1,14 @@
 import './Card.css'
-const Card = ({titolo, contenuto}) => {
+import { ThemeContext } from '../../contexts/ThemeContext'
+import { useContext } from 'react'
+const Card = ({titolo, testo}) => {
+
+  const {theme} = useContext(ThemeContext)
+
   return (
-    <div className="card dark-theme">
+    <div className={`card ${theme}-theme`}>
         <h3>{titolo}</h3>
-        <p>{contenuto}</p>
+        <p>{testo}</p>
     </div>
   )
 }

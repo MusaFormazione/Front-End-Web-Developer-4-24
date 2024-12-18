@@ -3,6 +3,13 @@ footer a{
     border-radius: 5px;
 }
 
+footer.light-theme{
+    color: #262626;
+}
+footer.dark-thme{
+    color: #fff;
+}
+
 footer.light-theme a{
     background-color: #262626;
     color: #fff;
