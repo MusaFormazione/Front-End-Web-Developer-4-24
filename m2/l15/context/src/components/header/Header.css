@@ -1,0 +1,15 @@
+.menu{
+    display: flex;
+    list-style: none;
+    gap: 10px;
+    justify-content: center;
+    padding: 0;
+}
+
+.menu.light-theme a{
+    color: #000;
+}
+
+.menu.dark-theme a{
+    color: #535bf2;
+}

@@ -1,0 +1,14 @@
+footer a{
+    padding: 3px 8px;
+    border-radius: 5px;
+}
+
+footer.light-theme a{
+    background-color: #262626;
+    color: #fff;
+}
+
+footer.dark-theme a{
+    color: #262626;
+    background-color: #fff;
+}

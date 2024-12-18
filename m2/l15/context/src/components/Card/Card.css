@@ -1,0 +1,13 @@
+.card.light-theme{
+    color: #000;
+    border: 1px solid #000;
+    background-color: #fff;
+}
+.card.dark-theme{
+    color: #fff;
+    border: 1px solid #fff;
+}
+.card{
+    margin-bottom: 15px;
+    border-radius: 15px;
+}
