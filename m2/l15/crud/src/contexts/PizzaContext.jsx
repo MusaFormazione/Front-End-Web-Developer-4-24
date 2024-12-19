@@ -13,7 +13,10 @@ export function PizzaProvider({children}){
         const response = await fetch(apiUrl,{
             method: 'POST',
             headers,
-            body: JSON.stringify(newPizza)
+            body: JSON.stringify({
+                ...newPizza,
+                prezzo: Number(newPizza.prezzo)
+            })
         })
 
         const pizza = await response.json()
@@ -41,11 +44,13 @@ export function PizzaProvider({children}){
             body: JSON.stringify(pizza)
         })
 
-        const data = await response.json()
+        await response.json()
 
         setPizzeArr(pizzeArray => {
+
             const index = pizzeArray.findIndex(p => p.id === pizza.id)
             pizzeArray.splice(index, 1, pizza)
+
             return pizzeArray
         })
     }
@@ -55,7 +60,7 @@ export function PizzaProvider({children}){
             headers
         })
 
-        const data = await response.json()
+        await response.json()
 
         setPizzeArr(pizzeArr.filter(p => p.id !== id))
     }

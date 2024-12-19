@@ -1,9 +1,24 @@
 {
   "pizze": [
     {
-      "gusto": "",
-      "prezzo": 0,
-      "id": 1
+      "gusto": "Consequatur irure a",
+      "prezzo": 62,
+      "id": 3
+    },
+    {
+      "gusto": "Provident officia n",
+      "prezzo": 2,
+      "id": 4
+    },
+    {
+      "gusto": "Ratione temporibus v",
+      "prezzo": 42,
+      "id": 5
+    },
+    {
+      "gusto": "Commodo elit velit ",
+      "prezzo": 42,
+      "id": 6
     }
   ]
 }
