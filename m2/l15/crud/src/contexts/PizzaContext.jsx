@@ -36,7 +36,7 @@ export function PizzaProvider({children}){
         setPizzeArr(pizze)
     }
 
-    // async function getPizzaById(){}
+    // async function getPizzaById(id){}
     async function editPizza(pizza){
         const response = await fetch(`${apiUrl}/${pizza.id}`,{
             method: 'PUT',

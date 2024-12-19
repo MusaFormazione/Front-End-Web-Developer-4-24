@@ -4,7 +4,11 @@ import { Link } from 'react-router'
 
 const Lista = () => {
 
-  const {pizzeArr, getPizze} = useContext(PizzaContext)
+  const {pizzeArr, getPizze, deletePizza} = useContext(PizzaContext)
+
+  const handleDelete = (id) => {
+    deletePizza(id)
+  }
 
   useEffect(() => {
 
@@ -31,7 +35,7 @@ const Lista = () => {
                   <td>{p.gusto}</td>
                   <td>{p.prezzo}</td>
                   <td>
-                    <button className="btn btn-danger">Elimina</button>
+                    <button onClick={() => handleDelete(p.id)} className="btn btn-danger">Elimina</button>
                     <Link 
                     to={`/edit-pizza/${p.id}`} 
                     className="btn btn-warning"

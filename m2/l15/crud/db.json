@@ -1,24 +1,14 @@
 {
   "pizze": [
     {
-      "gusto": "Consequatur irure a",
-      "prezzo": 62,
+      "gusto": "Margherita",
+      "prezzo": "5",
       "id": 3
     },
     {
-      "gusto": "Provident officia n",
-      "prezzo": 2,
+      "gusto": "Diavola",
+      "prezzo": "1",
       "id": 4
-    },
-    {
-      "gusto": "Ratione temporibus v",
-      "prezzo": 42,
-      "id": 5
-    },
-    {
-      "gusto": "Commodo elit velit ",
-      "prezzo": 42,
-      "id": 6
     }
   ]
 }
