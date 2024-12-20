@@ -1,13 +1,14 @@
 import { useDispatch, useSelector } from 'react-redux'
-// import Counter from './components/Counter'
 import Cart from './components/Cart'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import './App.css'
+// import Counter from './components/Counter'
+import { addToCart } from './redux/actions/cartActions'
 
 function App() {
 
   //Utilizzato per la lettura 
-  const products = useSelector((state)=>{
+  const products = useSelector((state)=>{   
     return state.shop.products
   })
 
@@ -18,6 +19,9 @@ function App() {
     <>
       <header>Nome shop <Cart/></header>
       <h1>Shop</h1>
+
+      {/* <Counter/> */}
+
 
       <div className="container">
 
@@ -33,10 +37,7 @@ function App() {
                               <p>{descrizione}</p>  
                               <p>{prezzo}€</p>
 
-                              <button onClick={()=>dispatch({
-                                type:'ADD_TO_CART',
-                                payload: product
-                              })} className="btn btn-primary">
+                              <button onClick={()=>dispatch(addToCart(product))} className="btn btn-primary">
                                 Aggiungi al carrello
                               </button>
                           </div>
@@ -49,7 +50,7 @@ function App() {
       </div>
 
 
-    {/* <Counter/> */}
+    
      
     </>
   )
