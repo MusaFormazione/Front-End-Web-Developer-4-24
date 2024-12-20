@@ -1,11 +1,17 @@
+import { useEffect } from 'react' 
 import { useDispatch, useSelector } from 'react-redux'
-import Cart from './components/Cart'
+import { addToCart, addToCartWithThunk } from './redux/actions/cartActions'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import './App.css'
+import Cart from './components/Cart'
+import { getProdutsAction } from './redux/actions/productActions'
 // import Counter from './components/Counter'
-import { addToCart } from './redux/actions/cartActions'
 
 function App() {
+
+  useEffect(() =>{
+    dispatch(getProdutsAction())
+  },[])
 
   //Utilizzato per la lettura 
   const products = useSelector((state)=>{   
@@ -37,7 +43,7 @@ function App() {
                               <p>{descrizione}</p>  
                               <p>{prezzo}€</p>
 
-                              <button onClick={()=>dispatch(addToCart(product))} className="btn btn-primary">
+                              <button onClick={()=>dispatch(addToCartWithThunk(product))} className="btn btn-primary">
                                 Aggiungi al carrello
                               </button>
                           </div>
